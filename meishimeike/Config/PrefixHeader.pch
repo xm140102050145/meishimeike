@@ -18,8 +18,12 @@
 /*全局delegate头文件*/
 #import "AppDelegate.h"
 /*放一些常量的头文件*/
+#import "LJConstants.h"
 
 /***  这里面写一些头文件  ***/
+/*** 类别  ***/
+#import "UIView+LJExtension.h"
+#import "UIBarButtonItem+LJExtension.h"
 
 //#######################  2 #####################################
 
@@ -36,13 +40,13 @@
 //#######################  3 #####################################
 /*** 日志 ***/
 #ifdef DEBUG
-#define LJLog(...) LJLog(__VA_ARGS__)
+#define LJLog(...) NSLog(__VA_ARGS__)
 #else
 #define LJLog(...)
 #endif
 //#######################  4 #####################################
 /*** 打印方法 ***/
-#define LJLogFunc LJLog(@"%s", __func__);
+#define LJLogFunc NSLog(@"%s", __func__);
 
 //#######################  5 常用的宏 #####################################
 /*** 颜色 ***/

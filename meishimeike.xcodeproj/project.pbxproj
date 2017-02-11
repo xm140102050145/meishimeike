@@ -15,6 +15,17 @@
 		14193B821E0A3CFF00B0F28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14193B7C1E0A3CFF00B0F28D /* Assets.xcassets */; };
 		14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B851E0A417800B0F28D /* LJRootViewController.m */; };
 		14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */; };
+		1469A7401E4EC59200395821 /* LJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A73F1E4EC59200395821 /* LJConstants.m */; };
+		1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */; };
+		1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7451E4EE1BA00395821 /* LJBaseViewController.m */; };
+		1469A7491E4EE21300395821 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7481E4EE21300395821 /* LJHomeViewController.m */; };
+		1469A74C1E4EE23200395821 /* LJInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A74B1E4EE23200395821 /* LJInfoViewController.m */; };
+		1469A74F1E4EE24B00395821 /* LJFoodCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A74E1E4EE24B00395821 /* LJFoodCircleViewController.m */; };
+		1469A7521E4EE25C00395821 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7511E4EE25C00395821 /* LJMeViewController.m */; };
+		1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */; };
+		1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7571E4F48FE00395821 /* LJTabBar.m */; };
+		1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */; };
+		1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,28 @@
 		14193B851E0A417800B0F28D /* LJRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRootViewController.m; sourceTree = "<group>"; };
 		14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14193B8E1E0A4C9F00B0F28D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1469A73E1E4EC59200395821 /* LJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConstants.h; sourceTree = "<group>"; };
+		1469A73F1E4EC59200395821 /* LJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJConstants.m; sourceTree = "<group>"; };
+		1469A7411E4ECE3600395821 /* LJMD5Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMD5Encrypt.h; sourceTree = "<group>"; };
+		1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMD5Encrypt.m; sourceTree = "<group>"; };
+		1469A7441E4EE1BA00395821 /* LJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseViewController.h; sourceTree = "<group>"; };
+		1469A7451E4EE1BA00395821 /* LJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseViewController.m; sourceTree = "<group>"; };
+		1469A7471E4EE21300395821 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJHomeViewController.h; path = meishimeike/Common/Contoller/LJHomeViewController.h; sourceTree = SOURCE_ROOT; };
+		1469A7481E4EE21300395821 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJHomeViewController.m; path = meishimeike/Common/Contoller/LJHomeViewController.m; sourceTree = SOURCE_ROOT; };
+		1469A74A1E4EE23200395821 /* LJInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJInfoViewController.h; sourceTree = "<group>"; };
+		1469A74B1E4EE23200395821 /* LJInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJInfoViewController.m; sourceTree = "<group>"; };
+		1469A74D1E4EE24B00395821 /* LJFoodCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJFoodCircleViewController.h; sourceTree = "<group>"; };
+		1469A74E1E4EE24B00395821 /* LJFoodCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJFoodCircleViewController.m; sourceTree = "<group>"; };
+		1469A7501E4EE25C00395821 /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJMeViewController.h; path = meishimeike/Class/FoodCircle/Controller/LJMeViewController.h; sourceTree = SOURCE_ROOT; };
+		1469A7511E4EE25C00395821 /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJMeViewController.m; path = meishimeike/Class/FoodCircle/Controller/LJMeViewController.m; sourceTree = SOURCE_ROOT; };
+		1469A7531E4EE2C000395821 /* LJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseNavigationController.h; sourceTree = "<group>"; };
+		1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseNavigationController.m; sourceTree = "<group>"; };
+		1469A7561E4F48FE00395821 /* LJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBar.h; sourceTree = "<group>"; };
+		1469A7571E4F48FE00395821 /* LJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBar.m; sourceTree = "<group>"; };
+		1469A7591E4F4F3C00395821 /* UIView+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LJExtension.h"; sourceTree = "<group>"; };
+		1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LJExtension.m"; sourceTree = "<group>"; };
+		1469A75C1E4F5EE700395821 /* UIBarButtonItem+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LJExtension.h"; sourceTree = "<group>"; };
+		1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +177,10 @@
 		14193B6F1E0A3CFF00B0F28D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1469A7591E4F4F3C00395821 /* UIView+LJExtension.h */,
+				1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */,
+				1469A75C1E4F5EE700395821 /* UIBarButtonItem+LJExtension.h */,
+				1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -151,6 +188,10 @@
 		14193B701E0A3CFF00B0F28D /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				1469A7441E4EE1BA00395821 /* LJBaseViewController.h */,
+				1469A7451E4EE1BA00395821 /* LJBaseViewController.m */,
+				1469A7531E4EE2C000395821 /* LJBaseNavigationController.h */,
+				1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -165,6 +206,10 @@
 		14193B721E0A3CFF00B0F28D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1469A73E1E4EC59200395821 /* LJConstants.h */,
+				1469A73F1E4EC59200395821 /* LJConstants.m */,
+				1469A7411E4ECE3600395821 /* LJMD5Encrypt.h */,
+				1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -172,6 +217,8 @@
 		14193B731E0A3CFF00B0F28D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1469A7561E4F48FE00395821 /* LJTabBar.h */,
+				1469A7571E4F48FE00395821 /* LJTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,8 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				14193B901E0A502C00B0F28D /* Home */,
-				14193BA01E0A502C00B0F28D /* Store */,
-				14193B941E0A502C00B0F28D /* Kitchen */,
+				1469A7331E4EB08800395821 /* Information */,
+				1469A7371E4EB08F00395821 /* FoodCircle */,
 				14193B9C1E0A502C00B0F28D /* Me */,
 				14193B981E0A502C00B0F28D /* Login&Regiter */,
 			);
@@ -239,6 +286,8 @@
 		14193B911E0A502C00B0F28D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1469A7471E4EE21300395821 /* LJHomeViewController.h */,
+				1469A7481E4EE21300395821 /* LJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,37 +300,6 @@
 			sourceTree = "<group>";
 		};
 		14193B931E0A502C00B0F28D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		14193B941E0A502C00B0F28D /* Kitchen */ = {
-			isa = PBXGroup;
-			children = (
-				14193B951E0A502C00B0F28D /* Controller */,
-				14193B961E0A502C00B0F28D /* Model */,
-				14193B971E0A502C00B0F28D /* View */,
-			);
-			path = Kitchen;
-			sourceTree = "<group>";
-		};
-		14193B951E0A502C00B0F28D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		14193B961E0A502C00B0F28D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		14193B971E0A502C00B0F28D /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -332,6 +350,8 @@
 		14193B9D1E0A502C00B0F28D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1469A7501E4EE25C00395821 /* LJMeViewController.h */,
+				1469A7511E4EE25C00395821 /* LJMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,31 +370,68 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		14193BA01E0A502C00B0F28D /* Store */ = {
+		1469A7331E4EB08800395821 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				14193BA11E0A502C00B0F28D /* Controller */,
-				14193BA21E0A502C00B0F28D /* Model */,
-				14193BA31E0A502C00B0F28D /* View */,
+				1469A7341E4EB08800395821 /* Controller */,
+				1469A7351E4EB08800395821 /* Model */,
+				1469A7361E4EB08800395821 /* View */,
 			);
-			path = Store;
-			sourceTree = "<group>";
+			name = Information;
+			path = meishimeike/Class/Information;
+			sourceTree = SOURCE_ROOT;
 		};
-		14193BA11E0A502C00B0F28D /* Controller */ = {
+		1469A7341E4EB08800395821 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1469A74A1E4EE23200395821 /* LJInfoViewController.h */,
+				1469A74B1E4EE23200395821 /* LJInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		14193BA21E0A502C00B0F28D /* Model */ = {
+		1469A7351E4EB08800395821 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		14193BA31E0A502C00B0F28D /* View */ = {
+		1469A7361E4EB08800395821 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1469A7371E4EB08F00395821 /* FoodCircle */ = {
+			isa = PBXGroup;
+			children = (
+				1469A7381E4EB08F00395821 /* Controller */,
+				1469A7391E4EB08F00395821 /* Model */,
+				1469A73A1E4EB08F00395821 /* View */,
+			);
+			name = FoodCircle;
+			path = meishimeike/Class/FoodCircle;
+			sourceTree = SOURCE_ROOT;
+		};
+		1469A7381E4EB08F00395821 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1469A74D1E4EE24B00395821 /* LJFoodCircleViewController.h */,
+				1469A74E1E4EE24B00395821 /* LJFoodCircleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1469A7391E4EB08F00395821 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1469A73A1E4EB08F00395821 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -515,9 +572,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */,
 				14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */,
+				1469A7521E4EE25C00395821 /* LJMeViewController.m in Sources */,
+				1469A74C1E4EE23200395821 /* LJInfoViewController.m in Sources */,
 				14193B801E0A3CFF00B0F28D /* main.m in Sources */,
+				1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */,
 				14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */,
+				1469A7491E4EE21300395821 /* LJHomeViewController.m in Sources */,
+				1469A7401E4EC59200395821 /* LJConstants.m in Sources */,
+				1469A74F1E4EE24B00395821 /* LJFoodCircleViewController.m in Sources */,
+				1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */,
+				1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */,
+				1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */,
+				1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
