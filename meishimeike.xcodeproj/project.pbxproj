@@ -15,17 +15,23 @@
 		14193B821E0A3CFF00B0F28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14193B7C1E0A3CFF00B0F28D /* Assets.xcassets */; };
 		14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B851E0A417800B0F28D /* LJRootViewController.m */; };
 		14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */; };
+		143BB7751E502FF4009E3766 /* LJData.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BB7741E502FF3009E3766 /* LJData.m */; };
+		143BB7781E50A112009E3766 /* LJNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BB7771E50A112009E3766 /* LJNewsTableViewCell.m */; };
+		143BB77B1E50B061009E3766 /* LJNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BB77A1E50B061009E3766 /* LJNewsModel.m */; };
 		1469A7401E4EC59200395821 /* LJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A73F1E4EC59200395821 /* LJConstants.m */; };
 		1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */; };
 		1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7451E4EE1BA00395821 /* LJBaseViewController.m */; };
-		1469A7491E4EE21300395821 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7481E4EE21300395821 /* LJHomeViewController.m */; };
 		1469A74C1E4EE23200395821 /* LJInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A74B1E4EE23200395821 /* LJInfoViewController.m */; };
 		1469A74F1E4EE24B00395821 /* LJFoodCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A74E1E4EE24B00395821 /* LJFoodCircleViewController.m */; };
-		1469A7521E4EE25C00395821 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7511E4EE25C00395821 /* LJMeViewController.m */; };
 		1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */; };
 		1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7571E4F48FE00395821 /* LJTabBar.m */; };
 		1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */; };
 		1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */; };
+		1469A7611E4F73EC00395821 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7601E4F73EC00395821 /* LJMeViewController.m */; };
+		1469A7641E4F742900395821 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7631E4F742900395821 /* LJHomeViewController.m */; };
+		435E6B05DB2D446582AB3FA4 /* libPods-meishimeikeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5D15885431F4055A9974B6 /* libPods-meishimeikeTests.a */; };
+		BCCC4D3EFEE899AC7170402F /* libPods-meishimeikeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8498B6DA9C037115DBE9E86 /* libPods-meishimeikeUITests.a */; };
+		CD33804C4668AEDF37DB9DD2 /* libPods-meishimeike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,20 +68,22 @@
 		14193B851E0A417800B0F28D /* LJRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRootViewController.m; sourceTree = "<group>"; };
 		14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14193B8E1E0A4C9F00B0F28D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		143BB7731E502FF3009E3766 /* LJData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJData.h; sourceTree = "<group>"; };
+		143BB7741E502FF3009E3766 /* LJData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJData.m; sourceTree = "<group>"; };
+		143BB7761E50A112009E3766 /* LJNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNewsTableViewCell.h; sourceTree = "<group>"; };
+		143BB7771E50A112009E3766 /* LJNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNewsTableViewCell.m; sourceTree = "<group>"; };
+		143BB7791E50B061009E3766 /* LJNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNewsModel.h; sourceTree = "<group>"; };
+		143BB77A1E50B061009E3766 /* LJNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNewsModel.m; sourceTree = "<group>"; };
 		1469A73E1E4EC59200395821 /* LJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConstants.h; sourceTree = "<group>"; };
 		1469A73F1E4EC59200395821 /* LJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJConstants.m; sourceTree = "<group>"; };
 		1469A7411E4ECE3600395821 /* LJMD5Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMD5Encrypt.h; sourceTree = "<group>"; };
 		1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMD5Encrypt.m; sourceTree = "<group>"; };
 		1469A7441E4EE1BA00395821 /* LJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseViewController.h; sourceTree = "<group>"; };
 		1469A7451E4EE1BA00395821 /* LJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseViewController.m; sourceTree = "<group>"; };
-		1469A7471E4EE21300395821 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJHomeViewController.h; path = meishimeike/Common/Contoller/LJHomeViewController.h; sourceTree = SOURCE_ROOT; };
-		1469A7481E4EE21300395821 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJHomeViewController.m; path = meishimeike/Common/Contoller/LJHomeViewController.m; sourceTree = SOURCE_ROOT; };
 		1469A74A1E4EE23200395821 /* LJInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJInfoViewController.h; sourceTree = "<group>"; };
 		1469A74B1E4EE23200395821 /* LJInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJInfoViewController.m; sourceTree = "<group>"; };
 		1469A74D1E4EE24B00395821 /* LJFoodCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJFoodCircleViewController.h; sourceTree = "<group>"; };
 		1469A74E1E4EE24B00395821 /* LJFoodCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJFoodCircleViewController.m; sourceTree = "<group>"; };
-		1469A7501E4EE25C00395821 /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJMeViewController.h; path = meishimeike/Class/FoodCircle/Controller/LJMeViewController.h; sourceTree = SOURCE_ROOT; };
-		1469A7511E4EE25C00395821 /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJMeViewController.m; path = meishimeike/Class/FoodCircle/Controller/LJMeViewController.m; sourceTree = SOURCE_ROOT; };
 		1469A7531E4EE2C000395821 /* LJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseNavigationController.h; sourceTree = "<group>"; };
 		1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseNavigationController.m; sourceTree = "<group>"; };
 		1469A7561E4F48FE00395821 /* LJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBar.h; sourceTree = "<group>"; };
@@ -84,6 +92,19 @@
 		1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LJExtension.m"; sourceTree = "<group>"; };
 		1469A75C1E4F5EE700395821 /* UIBarButtonItem+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LJExtension.h"; sourceTree = "<group>"; };
 		1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LJExtension.m"; sourceTree = "<group>"; };
+		1469A75F1E4F73EC00395821 /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJMeViewController.h; path = meishimeike/Class/Me/Controller/LJMeViewController.h; sourceTree = SOURCE_ROOT; };
+		1469A7601E4F73EC00395821 /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJMeViewController.m; path = meishimeike/Class/Me/Controller/LJMeViewController.m; sourceTree = SOURCE_ROOT; };
+		1469A7621E4F742900395821 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJHomeViewController.h; path = meishimeike/Class/Home/Controller/LJHomeViewController.h; sourceTree = SOURCE_ROOT; };
+		1469A7631E4F742900395821 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJHomeViewController.m; path = meishimeike/Class/Home/Controller/LJHomeViewController.m; sourceTree = SOURCE_ROOT; };
+		317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-meishimeike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AF6430088C4DD4EEC8B968 /* Pods-meishimeikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		541B2E2BAE7C60A85007C915 /* Pods-meishimeikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F5D15885431F4055A9974B6 /* libPods-meishimeikeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-meishimeikeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9357958B02A0EBAD8D9143F9 /* Pods-meishimeikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeUITests/Pods-meishimeikeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8498B6DA9C037115DBE9E86 /* libPods-meishimeikeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-meishimeikeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D234F690D028690874CA3CFC /* Pods-meishimeike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeike.release.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeike/Pods-meishimeike.release.xcconfig"; sourceTree = "<group>"; };
+		E3D88C5DC4F19A8FBC1786DA /* Pods-meishimeikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeUITests/Pods-meishimeikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEFA6B62DD39DD44826A2528 /* Pods-meishimeike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeike/Pods-meishimeike.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD33804C4668AEDF37DB9DD2 /* libPods-meishimeike.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435E6B05DB2D446582AB3FA4 /* libPods-meishimeikeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCC4D3EFEE899AC7170402F /* libPods-meishimeikeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +142,8 @@
 				14193B531E0A29D500B0F28D /* meishimeikeTests */,
 				14193B5E1E0A29D500B0F28D /* meishimeikeUITests */,
 				14193B381E0A29D400B0F28D /* Products */,
+				FBB92E19BADA356B82EE2E96 /* Pods */,
+				4C09587A2075EEEE911631F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +236,8 @@
 				1469A73F1E4EC59200395821 /* LJConstants.m */,
 				1469A7411E4ECE3600395821 /* LJMD5Encrypt.h */,
 				1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */,
+				143BB7731E502FF3009E3766 /* LJData.h */,
+				143BB7741E502FF3009E3766 /* LJData.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -286,8 +314,8 @@
 		14193B911E0A502C00B0F28D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1469A7471E4EE21300395821 /* LJHomeViewController.h */,
-				1469A7481E4EE21300395821 /* LJHomeViewController.m */,
+				1469A7621E4F742900395821 /* LJHomeViewController.h */,
+				1469A7631E4F742900395821 /* LJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,8 +378,8 @@
 		14193B9D1E0A502C00B0F28D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1469A7501E4EE25C00395821 /* LJMeViewController.h */,
-				1469A7511E4EE25C00395821 /* LJMeViewController.m */,
+				1469A75F1E4F73EC00395821 /* LJMeViewController.h */,
+				1469A7601E4F73EC00395821 /* LJMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +421,8 @@
 		1469A7351E4EB08800395821 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				143BB7791E50B061009E3766 /* LJNewsModel.h */,
+				143BB77A1E50B061009E3766 /* LJNewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,6 +430,8 @@
 		1469A7361E4EB08800395821 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				143BB7761E50A112009E3766 /* LJNewsTableViewCell.h */,
+				143BB7771E50A112009E3766 /* LJNewsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +470,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4C09587A2075EEEE911631F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */,
+				6F5D15885431F4055A9974B6 /* libPods-meishimeikeTests.a */,
+				B8498B6DA9C037115DBE9E86 /* libPods-meishimeikeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB92E19BADA356B82EE2E96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEFA6B62DD39DD44826A2528 /* Pods-meishimeike.debug.xcconfig */,
+				D234F690D028690874CA3CFC /* Pods-meishimeike.release.xcconfig */,
+				50AF6430088C4DD4EEC8B968 /* Pods-meishimeikeTests.debug.xcconfig */,
+				541B2E2BAE7C60A85007C915 /* Pods-meishimeikeTests.release.xcconfig */,
+				E3D88C5DC4F19A8FBC1786DA /* Pods-meishimeikeUITests.debug.xcconfig */,
+				9357958B02A0EBAD8D9143F9 /* Pods-meishimeikeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,9 +500,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14193B641E0A29D500B0F28D /* Build configuration list for PBXNativeTarget "meishimeike" */;
 			buildPhases = (
+				8942D3872461AD78BB03A362 /* [CP] Check Pods Manifest.lock */,
 				14193B331E0A29D400B0F28D /* Sources */,
 				14193B341E0A29D400B0F28D /* Frameworks */,
 				14193B351E0A29D400B0F28D /* Resources */,
+				2938B4E29A5D0133678D8831 /* [CP] Embed Pods Frameworks */,
+				FABD6C7B362FFBFDCD728911 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -462,9 +520,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14193B671E0A29D500B0F28D /* Build configuration list for PBXNativeTarget "meishimeikeTests" */;
 			buildPhases = (
+				7EB495AC99DFCE912C482DD8 /* [CP] Check Pods Manifest.lock */,
 				14193B4C1E0A29D500B0F28D /* Sources */,
 				14193B4D1E0A29D500B0F28D /* Frameworks */,
 				14193B4E1E0A29D500B0F28D /* Resources */,
+				E2F63831359D1CF9B731FA1E /* [CP] Embed Pods Frameworks */,
+				5D8FA7C458016887ED307D2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,9 +541,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14193B6A1E0A29D500B0F28D /* Build configuration list for PBXNativeTarget "meishimeikeUITests" */;
 			buildPhases = (
+				7ED7DEAD7308752C7ADE3C22 /* [CP] Check Pods Manifest.lock */,
 				14193B571E0A29D500B0F28D /* Sources */,
 				14193B581E0A29D500B0F28D /* Frameworks */,
 				14193B591E0A29D500B0F28D /* Resources */,
+				B51F16183A5BAF0603424928 /* [CP] Embed Pods Frameworks */,
+				1372B26BD2C2878423E04FFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -567,23 +631,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1372B26BD2C2878423E04FFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeikeUITests/Pods-meishimeikeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2938B4E29A5D0133678D8831 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeike/Pods-meishimeike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D8FA7C458016887ED307D2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EB495AC99DFCE912C482DD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED7DEAD7308752C7ADE3C22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8942D3872461AD78BB03A362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B51F16183A5BAF0603424928 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeikeUITests/Pods-meishimeikeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F63831359D1CF9B731FA1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FABD6C7B362FFBFDCD728911 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meishimeike/Pods-meishimeike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14193B331E0A29D400B0F28D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143BB77B1E50B061009E3766 /* LJNewsModel.m in Sources */,
 				1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */,
 				14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */,
-				1469A7521E4EE25C00395821 /* LJMeViewController.m in Sources */,
 				1469A74C1E4EE23200395821 /* LJInfoViewController.m in Sources */,
+				143BB7751E502FF4009E3766 /* LJData.m in Sources */,
 				14193B801E0A3CFF00B0F28D /* main.m in Sources */,
 				1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */,
+				143BB7781E50A112009E3766 /* LJNewsTableViewCell.m in Sources */,
 				14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */,
-				1469A7491E4EE21300395821 /* LJHomeViewController.m in Sources */,
 				1469A7401E4EC59200395821 /* LJConstants.m in Sources */,
 				1469A74F1E4EE24B00395821 /* LJFoodCircleViewController.m in Sources */,
 				1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */,
+				1469A7611E4F73EC00395821 /* LJMeViewController.m in Sources */,
 				1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */,
+				1469A7641E4F742900395821 /* LJHomeViewController.m in Sources */,
 				1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */,
 				1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */,
 			);
@@ -711,6 +916,7 @@
 		};
 		14193B651E0A29D500B0F28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEFA6B62DD39DD44826A2528 /* Pods-meishimeike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -728,6 +934,7 @@
 		};
 		14193B661E0A29D500B0F28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D234F690D028690874CA3CFC /* Pods-meishimeike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HZ9XRR9C5D;
@@ -743,6 +950,7 @@
 		};
 		14193B681E0A29D500B0F28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50AF6430088C4DD4EEC8B968 /* Pods-meishimeikeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HZ9XRR9C5D;
@@ -756,6 +964,7 @@
 		};
 		14193B691E0A29D500B0F28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541B2E2BAE7C60A85007C915 /* Pods-meishimeikeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HZ9XRR9C5D;
@@ -769,6 +978,7 @@
 		};
 		14193B6B1E0A29D500B0F28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D88C5DC4F19A8FBC1786DA /* Pods-meishimeikeUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HZ9XRR9C5D;
 				INFOPLIST_FILE = meishimeikeUITests/Info.plist;
@@ -781,6 +991,7 @@
 		};
 		14193B6C1E0A29D500B0F28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9357958B02A0EBAD8D9143F9 /* Pods-meishimeikeUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HZ9XRR9C5D;
 				INFOPLIST_FILE = meishimeikeUITests/Info.plist;

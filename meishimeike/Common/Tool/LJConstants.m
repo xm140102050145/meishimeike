@@ -2,6 +2,8 @@
 
 /*** 服务器地址  ***/
 NSString *url = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/";
+/*** 资讯图片地址 ***/
+NSString *const newsUrl = @"http://192.168.3.17:8888/meishimeike/images/news/";
 /*** 注册  ***/
 NSString *const Register = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/register";
 /*** 登陆  ***/
