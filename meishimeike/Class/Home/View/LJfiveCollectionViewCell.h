@@ -1,5 +1,5 @@
 //
-//  LJHomeViewController.h
+//  LJfiveCollectionViewCell.h
 //  meishimeike
 //
 //  Created by zhenglong duan on 15/03/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LJHomeViewController : UIViewController
+@interface LJfiveCollectionViewCell : UICollectionViewCell
 
 @end

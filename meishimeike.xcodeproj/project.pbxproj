@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		14193B551E0A29D500B0F28D /* meishimeikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B541E0A29D500B0F28D /* meishimeikeTests.m */; };
 		14193B601E0A29D500B0F28D /* meishimeikeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B5F1E0A29D500B0F28D /* meishimeikeUITests.m */; };
-		14193B7F1E0A3CFF00B0F28D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14193B751E0A3CFF00B0F28D /* Info.plist */; };
 		14193B801E0A3CFF00B0F28D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B761E0A3CFF00B0F28D /* main.m */; };
 		14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B7A1E0A3CFF00B0F28D /* AppDelegate.m */; };
 		14193B821E0A3CFF00B0F28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14193B7C1E0A3CFF00B0F28D /* Assets.xcassets */; };
@@ -28,7 +27,15 @@
 		1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75A1E4F4F3C00395821 /* UIView+LJExtension.m */; };
 		1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */; };
 		1469A7611E4F73EC00395821 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7601E4F73EC00395821 /* LJMeViewController.m */; };
-		1469A7641E4F742900395821 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7631E4F742900395821 /* LJHomeViewController.m */; };
+		148A6CE91E79875900708218 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CE81E79875900708218 /* LJHomeViewController.m */; };
+		148A6CEC1E7989CF00708218 /* LJCirculyHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CEB1E7989CF00708218 /* LJCirculyHeaderReusableView.m */; };
+		148A6CF01E798AA300708218 /* LJMenuItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CEE1E798AA300708218 /* LJMenuItemCollectionViewCell.m */; };
+		148A6CF11E798AA300708218 /* LJMenuItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148A6CEF1E798AA300708218 /* LJMenuItemCollectionViewCell.xib */; };
+		148A6CF51E798B0800708218 /* LJWeDoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CF31E798B0800708218 /* LJWeDoCollectionViewCell.m */; };
+		148A6CF61E798B0800708218 /* LJWeDoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148A6CF41E798B0800708218 /* LJWeDoCollectionViewCell.xib */; };
+		148A6CFA1E798BBA00708218 /* LJfiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CF81E798BBA00708218 /* LJfiveCollectionViewCell.m */; };
+		148A6CFB1E798BBA00708218 /* LJfiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148A6CF91E798BBA00708218 /* LJfiveCollectionViewCell.xib */; };
+		148A6CFE1E798BE300708218 /* LJtowCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148A6CFD1E798BE300708218 /* LJtowCollectionReusableView.m */; };
 		435E6B05DB2D446582AB3FA4 /* libPods-meishimeikeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5D15885431F4055A9974B6 /* libPods-meishimeikeTests.a */; };
 		BCCC4D3EFEE899AC7170402F /* libPods-meishimeikeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8498B6DA9C037115DBE9E86 /* libPods-meishimeikeUITests.a */; };
 		CD33804C4668AEDF37DB9DD2 /* libPods-meishimeike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */; };
@@ -94,8 +101,21 @@
 		1469A75D1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LJExtension.m"; sourceTree = "<group>"; };
 		1469A75F1E4F73EC00395821 /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJMeViewController.h; path = meishimeike/Class/Me/Controller/LJMeViewController.h; sourceTree = SOURCE_ROOT; };
 		1469A7601E4F73EC00395821 /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJMeViewController.m; path = meishimeike/Class/Me/Controller/LJMeViewController.m; sourceTree = SOURCE_ROOT; };
-		1469A7621E4F742900395821 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJHomeViewController.h; path = meishimeike/Class/Home/Controller/LJHomeViewController.h; sourceTree = SOURCE_ROOT; };
-		1469A7631E4F742900395821 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJHomeViewController.m; path = meishimeike/Class/Home/Controller/LJHomeViewController.m; sourceTree = SOURCE_ROOT; };
+		148A6CE71E79875900708218 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJHomeViewController.h; path = meishimeike/Class/Home/Controller/LJHomeViewController.h; sourceTree = SOURCE_ROOT; };
+		148A6CE81E79875900708218 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJHomeViewController.m; path = meishimeike/Class/Home/Controller/LJHomeViewController.m; sourceTree = SOURCE_ROOT; };
+		148A6CEA1E7989CF00708218 /* LJCirculyHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJCirculyHeaderReusableView.h; path = meishimeike/Class/Home/View/LJCirculyHeaderReusableView.h; sourceTree = SOURCE_ROOT; };
+		148A6CEB1E7989CF00708218 /* LJCirculyHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJCirculyHeaderReusableView.m; path = meishimeike/Class/Home/View/LJCirculyHeaderReusableView.m; sourceTree = SOURCE_ROOT; };
+		148A6CED1E798AA300708218 /* LJMenuItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJMenuItemCollectionViewCell.h; path = meishimeike/Class/Home/View/LJMenuItemCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		148A6CEE1E798AA300708218 /* LJMenuItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJMenuItemCollectionViewCell.m; path = meishimeike/Class/Home/View/LJMenuItemCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		148A6CEF1E798AA300708218 /* LJMenuItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJMenuItemCollectionViewCell.xib; path = meishimeike/Class/Home/View/LJMenuItemCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		148A6CF21E798B0800708218 /* LJWeDoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJWeDoCollectionViewCell.h; path = meishimeike/Class/Home/View/LJWeDoCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		148A6CF31E798B0800708218 /* LJWeDoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJWeDoCollectionViewCell.m; path = meishimeike/Class/Home/View/LJWeDoCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		148A6CF41E798B0800708218 /* LJWeDoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJWeDoCollectionViewCell.xib; path = meishimeike/Class/Home/View/LJWeDoCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		148A6CF71E798BBA00708218 /* LJfiveCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJfiveCollectionViewCell.h; path = meishimeike/Class/Home/View/LJfiveCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		148A6CF81E798BBA00708218 /* LJfiveCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJfiveCollectionViewCell.m; path = meishimeike/Class/Home/View/LJfiveCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		148A6CF91E798BBA00708218 /* LJfiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJfiveCollectionViewCell.xib; path = meishimeike/Class/Home/View/LJfiveCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		148A6CFC1E798BE300708218 /* LJtowCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJtowCollectionReusableView.h; path = meishimeike/Class/Home/View/LJtowCollectionReusableView.h; sourceTree = SOURCE_ROOT; };
+		148A6CFD1E798BE300708218 /* LJtowCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJtowCollectionReusableView.m; path = meishimeike/Class/Home/View/LJtowCollectionReusableView.m; sourceTree = SOURCE_ROOT; };
 		317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-meishimeike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AF6430088C4DD4EEC8B968 /* Pods-meishimeikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		541B2E2BAE7C60A85007C915 /* Pods-meishimeikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meishimeikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meishimeikeTests/Pods-meishimeikeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,8 +334,8 @@
 		14193B911E0A502C00B0F28D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1469A7621E4F742900395821 /* LJHomeViewController.h */,
-				1469A7631E4F742900395821 /* LJHomeViewController.m */,
+				148A6CE71E79875900708218 /* LJHomeViewController.h */,
+				148A6CE81E79875900708218 /* LJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +350,19 @@
 		14193B931E0A502C00B0F28D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				148A6CEA1E7989CF00708218 /* LJCirculyHeaderReusableView.h */,
+				148A6CEB1E7989CF00708218 /* LJCirculyHeaderReusableView.m */,
+				148A6CED1E798AA300708218 /* LJMenuItemCollectionViewCell.h */,
+				148A6CEE1E798AA300708218 /* LJMenuItemCollectionViewCell.m */,
+				148A6CEF1E798AA300708218 /* LJMenuItemCollectionViewCell.xib */,
+				148A6CF21E798B0800708218 /* LJWeDoCollectionViewCell.h */,
+				148A6CF31E798B0800708218 /* LJWeDoCollectionViewCell.m */,
+				148A6CF41E798B0800708218 /* LJWeDoCollectionViewCell.xib */,
+				148A6CF71E798BBA00708218 /* LJfiveCollectionViewCell.h */,
+				148A6CF81E798BBA00708218 /* LJfiveCollectionViewCell.m */,
+				148A6CF91E798BBA00708218 /* LJfiveCollectionViewCell.xib */,
+				148A6CFC1E798BE300708218 /* LJtowCollectionReusableView.h */,
+				148A6CFD1E798BE300708218 /* LJtowCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -609,8 +642,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148A6CF11E798AA300708218 /* LJMenuItemCollectionViewCell.xib in Resources */,
+				148A6CF61E798B0800708218 /* LJWeDoCollectionViewCell.xib in Resources */,
+				148A6CFB1E798BBA00708218 /* LJfiveCollectionViewCell.xib in Resources */,
 				14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */,
-				14193B7F1E0A3CFF00B0F28D /* Info.plist in Resources */,
 				14193B821E0A3CFF00B0F28D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,6 +809,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148A6CEC1E7989CF00708218 /* LJCirculyHeaderReusableView.m in Sources */,
+				148A6CF51E798B0800708218 /* LJWeDoCollectionViewCell.m in Sources */,
+				148A6CFA1E798BBA00708218 /* LJfiveCollectionViewCell.m in Sources */,
 				143BB77B1E50B061009E3766 /* LJNewsModel.m in Sources */,
 				1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */,
 				14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */,
@@ -783,12 +821,14 @@
 				1469A75B1E4F4F3C00395821 /* UIView+LJExtension.m in Sources */,
 				143BB7781E50A112009E3766 /* LJNewsTableViewCell.m in Sources */,
 				14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */,
+				148A6CF01E798AA300708218 /* LJMenuItemCollectionViewCell.m in Sources */,
 				1469A7401E4EC59200395821 /* LJConstants.m in Sources */,
+				148A6CFE1E798BE300708218 /* LJtowCollectionReusableView.m in Sources */,
 				1469A74F1E4EE24B00395821 /* LJFoodCircleViewController.m in Sources */,
 				1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */,
+				148A6CE91E79875900708218 /* LJHomeViewController.m in Sources */,
 				1469A7611E4F73EC00395821 /* LJMeViewController.m in Sources */,
 				1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */,
-				1469A7641E4F742900395821 /* LJHomeViewController.m in Sources */,
 				1469A75E1E4F5EE700395821 /* UIBarButtonItem+LJExtension.m in Sources */,
 				1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */,
 			);
@@ -866,7 +906,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -907,7 +947,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "LJNewsModel.h"
 @interface LJNewsTableViewCell : UITableViewCell
-- (void)setCellInfo:(LJNewsModel *)newsModel;
+//- (void)setCellInfo:(LJNewsModel *)newsModel;
 @end

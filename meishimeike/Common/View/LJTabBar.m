@@ -64,7 +64,6 @@
     self.publishButton.lj_height = buttonH;
     self.publishButton.lj_x = 2*buttonW;
     self.publishButton.lj_y = 0;
-    
 }
 
 #pragma mark--发布
