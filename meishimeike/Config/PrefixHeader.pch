@@ -26,8 +26,11 @@
 #import "UIBarButtonItem+LJExtension.h"
 
 /*** 数据获取 ***/
-#import "LJData.h"
+#import "AFNetworkingAPI.h"
 
+#import "MJExtension.h"
+/**8.图片下载*/
+#import "UIImageView+WebCache.h"
 /*** 约束 ***/
 #import <Masonry.h>
 //#######################  2 #####################################
@@ -54,6 +57,10 @@
 #define LJLogFunc NSLog(@"%s", __func__);
 
 //#######################  5 常用的宏 #####################################
+//比例间距 /*** 以6屏幕为基准 ***/
+#define spaceEdgeW(a) ((a)/ 375.0 * SCREEN_WIDTH)
+#define spaceEdgeH(b) ((b)/ 667.0 * SCREEN_HEIGHT)
+
 /*** 颜色 ***/
 #define LJColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 /*** 颜色（透明度固定） ***/
@@ -68,7 +75,7 @@
 /*** 颜色（统一背景颜色）***/
 #define LJCommonBgColor LJColorFromRGB(0xf3f3f3)
 /*** 主颜色 ***/
-#define LJTheMeColor LJColorFromRGB(0xed1309)
+#define LJTheMeColor LJColorFromRGB(0xff2e55)
 /***分割线的颜色***/
 #define LJCutLineColor LJColorFromRGB(0xe3e3e3)
 
@@ -84,6 +91,8 @@
 #define LJFontColor26 LJColorFromRGB(0x262626)
 #define LJFontColor88 LJColorFromRGB(0x888888)
 #define LJFontColorOr LJColorFromRGB(0xff842e)
+
+#define LJwindow [UIApplication sharedApplication].keyWindow
 
 //#######################  6 常用的宏 #####################################
 //G－C－D

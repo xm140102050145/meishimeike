@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LJNewsModel.h"
+
 @interface LJNewsTableViewCell : UITableViewCell
-//- (void)setCellInfo:(LJNewsModel *)newsModel;
+@property (nonatomic,strong) LJNewsModel *newsModel;
 @end

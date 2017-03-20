@@ -1,9 +1,19 @@
                    /*** 常量  ***/
 
-/*** 服务器地址  ***/
-NSString *url = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/";
+
 /*** 资讯图片地址 ***/
 NSString *const newsUrl = @"http://192.168.3.17:8888/meishimeike/images/news/";
+/*** 头像 ***/
+NSString *const headerUrl = @"http://192.168.3.17:8888/meishimeike/images/header/";
+/*** 背景 ***/
+NSString *const bgimageUrl = @"http://192.168.3.17:8888/meishimeike/images/bgimage/";
+/*** 美食 ***/
+NSString *const foodimageUrl = @"http://192.168.3.17:8888/meishimeike/images/foodimage/";
+/*** 说说 ***/
+NSString *const suosuoUrl = @"http://192.168.3.17:8888/meishimeike/images/suosuo/";
+
+
+
 /*** 注册  ***/
 NSString *const Register = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/register";
 /*** 登陆  ***/

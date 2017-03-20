@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LJWeDoCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewCell;
 
 @end

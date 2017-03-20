@@ -11,12 +11,23 @@
 #import "LJWeDoCollectionViewCell.h"
 #import "LJfiveCollectionViewCell.h"
 #import "LJtowCollectionReusableView.h"
+#import "LJCirculyHeaderReusableView.h"
 
-@interface LJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+#import "LJzhongcanViewController.h" //进入中餐表
+
+@interface LJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DLCycleBannerViewDelegate>
 /*** 主要 :CollectionView ***/
 @property (nonatomic,strong) UICollectionView *LJCollectionView;
 /*** 存放菜单的数据 ***/
 @property (nonatomic,strong) NSArray *meunArray;
+@property (nonatomic,strong) NSArray *dajiaArray;
+@property (nonatomic,strong) NSArray *zhouArray;
+@property (nonatomic,strong) NSArray *yangArray;
+@property (nonatomic,strong) NSArray *teArray;
+
+
+/*** 大家都在做数据 ***/
+@property (nonatomic,strong) NSArray *allMakeArray;
 @end
 
 @implementation LJHomeViewController
@@ -26,6 +37,7 @@
     [self configureBaseInfo];       //1.配置configureBaseInfo基本属性
     [self configureCollectionView]; //2.配置collectionView属性
     [self setNavIcon];
+    [self loadData];  //加载数据
 }
     
 #pragma mark --configureBaseInfo
@@ -35,6 +47,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"美食美客";
     self.meunArray = @[@{@"icon":@"home_chinesefood_selected_icon",@"name":@"中餐"},@{@"icon":@"home_cooking_selected_icon",@"name":@"西餐"},@{@"icon":@"home_westfood_selected_icon",@"name":@"烘培"},@{@"icon":@"home_drink_selected_icon",@"name":@"果饮"}];
+    self.dajiaArray = @[@"d1@2x",@"d2@2x",@"d3@2x"];
+    self.zhouArray = @[@"z1@2x",@"z2@2x",@"z3@2x",@"z4@2x",];
+    self.yangArray = @[@"y1@2x",@"y2@2x",@"y3@2x",@"y4@2x",@"y5@2x",@"y6@2x",@"y7@2x",@"y8@2x",];
+    self.teArray = @[];
     
 }
 
@@ -112,25 +128,28 @@
         return cell;
     }else if (indexPath.section == 1){
         LJWeDoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJWeDoCollectionViewCell" forIndexPath:indexPath];
+        cell.imageViewCell.image = [UIImage imageNamed:self.dajiaArray[indexPath.row]];
         return cell;
     }else if (indexPath.section == 2){
         LJWeDoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJWeDoCollectionViewCell" forIndexPath:indexPath];
+        cell.imageViewCell.image = [UIImage imageNamed:self.zhouArray[indexPath.row]];
         return cell;
     }else if (indexPath.section == 3){
         LJWeDoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJWeDoCollectionViewCell" forIndexPath:indexPath];
+        cell.imageViewCell.image = [UIImage imageNamed:self.yangArray[indexPath.row]];
         return cell;
     }else if (indexPath.section == 4){
         LJfiveCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJfiveCollectionViewCell" forIndexPath:indexPath];
         return cell;
     }
-    
     return nil;
     
 }
 //头尾视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"LJCirculyHeader" forIndexPath:indexPath];
+        LJCirculyHeaderReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"LJCirculyHeader" forIndexPath:indexPath];
+        reusableView.cycleBannerView.delegate = self;
         return reusableView;
     }else if (indexPath.section == 1){
         LJtowCollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"LJtowReusableView" forIndexPath:indexPath];
@@ -152,6 +171,10 @@
     return nil;
 }
 
+- (void)cycleBannerView:(DLCycleBannerView *)cycleBannerView didSelectItemAtIndex:(NSInteger)Index {
+    NSLog(@"%ld",Index);
+}
+
 #pragma mark --collectionView Delegate
 // 返回这个UICollectionView是否可以被选择
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,7 +183,10 @@
 //UICollectionView被选中的时候调用
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        NSLog(@"%zd",indexPath.item);
+        if (indexPath.row == 0) {
+            LJzhongcanViewController *zhongcan = [[LJzhongcanViewController alloc] init];
+            [self.navigationController pushViewController:zhongcan animated:YES];
+        }
     }else if (indexPath.section == 1){
         
     }else if (indexPath.section == 2){
@@ -191,7 +217,10 @@
 }
 //动态设置每个分区的EdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(5, 0, 5, 0);
+    if (section == 1 ||section == 4 ||section == 0) {
+       return UIEdgeInsetsMake(5, 0, 5, 0);
+    }
+    return UIEdgeInsetsMake(5, 2, 5, 2);
 }
 
 //动态设置某组头视图大小
@@ -210,10 +239,18 @@
 }
 
 
+#pragma mark --加载数据
+- (void)loadData {
+    [AFNetworkingAPI getWithPath:Allmake Params:nil requrieDataBack:^(id data) {
+        self.allMakeArray = data;
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
+- (void)indexOnPageControl:(NSInteger)index {
+    
+}
 
 @end

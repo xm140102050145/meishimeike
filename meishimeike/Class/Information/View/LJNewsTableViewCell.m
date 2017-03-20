@@ -16,6 +16,8 @@
 @property (nonatomic,strong) UILabel *priefLabel;
 /*** 时间 ***/
 @property (nonatomic,strong) UILabel *timeLabel;
+
+
 @end
 @implementation LJNewsTableViewCell
 
@@ -27,7 +29,6 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         /*** 图片 ***/
         self.newsImageView = [[UIImageView alloc] init];
-        self.newsImageView.backgroundColor = LJRandomColor;
         [self.contentView addSubview:self.newsImageView];
         [self.newsImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(10);
@@ -38,7 +39,6 @@
         self.titleLabel = [[UILabel alloc] init];
         [self.titleLabel setFont:[UIFont systemFontOfSize:16 weight:1]];
         self.titleLabel.text = @"yyy文字";
-        self.titleLabel.backgroundColor = LJRandomColor;
         [self.contentView addSubview:self.titleLabel];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.newsImageView.mas_right).offset(5);
@@ -52,7 +52,6 @@
         self.priefLabel.text = @"dhfadshflhjdsfhjdsfhdsfjhasjdfhlj一瑁践 残疾证中ugjjkhgjkghjgjgjgjhgjgjgjhgjh";
         self.priefLabel.numberOfLines = 0;
         [self.priefLabel sizeToFit];
-        self.priefLabel.backgroundColor = LJRandomColor;
         [self.contentView addSubview:self.priefLabel];
         [self.priefLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.newsImageView.mas_right).offset(5);
@@ -65,19 +64,24 @@
         [self.timeLabel setFont:[UIFont systemFontOfSize:12]];
         self.timeLabel.text = @"2017-02-12";
         [self.timeLabel sizeToFit];
-        self.timeLabel.backgroundColor = LJRandomColor;
         [self.contentView addSubview:self.timeLabel];
         [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.priefLabel.mas_bottom).offset(2);
             make.right.mas_equalTo(self.contentView.mas_right).offset(-5);
             make.height.mas_equalTo(10);
-        }];
-        
+        }];     
     }
     return self;
 }
 
-
+- (void)setNewsModel:(LJNewsModel *)newsModel {
+    _newsModel = newsModel;
+    NSURL *imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",newsUrl,newsModel.news_image]];
+    [self.newsImageView sd_setImageWithURL:imageUrl];
+    self.titleLabel.text = newsModel.news_title;
+    self.priefLabel.text = newsModel.news_prief;
+    self.timeLabel.text = newsModel.news_time;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

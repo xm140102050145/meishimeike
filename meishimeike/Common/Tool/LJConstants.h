@@ -7,6 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+/*** 资讯图片地址 ***/
+extern NSString *const newsUrl;
+/*** 头像 ***/
+extern NSString *const headerUrl;
+/*** 背景 ***/
+extern NSString *const bgimageUrl;
+/*** 美食 ***/
+extern NSString *const foodimageUrl;
+/*** 说说 ***/
+extern NSString *const suosuoUrl;
+
+
 /*** 注册  ***/
 extern NSString *const Register ;
 /*** 登陆  ***/

@@ -19,30 +19,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-sG-lRU">
-                        <rect key="frame" x="0.0" y="0.0" width="132" height="114"/>
-                        <color key="backgroundColor" red="0.43446100059999998" green="1" blue="0.95619993079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="132" height="134"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欧州鲍鱼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fr-CK-eVy">
-                        <rect key="frame" x="0.0" y="114" width="132" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Sql-hX-6Cu"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="qkJ-sG-lRU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1ck-ex-GwI"/>
-                <constraint firstAttribute="bottom" secondItem="qkJ-sG-lRU" secondAttribute="bottom" constant="20" id="B03-cv-hfR"/>
+                <constraint firstAttribute="bottom" secondItem="qkJ-sG-lRU" secondAttribute="bottom" id="B03-cv-hfR"/>
                 <constraint firstItem="qkJ-sG-lRU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aMH-4m-Ezu"/>
-                <constraint firstAttribute="trailing" secondItem="9Fr-CK-eVy" secondAttribute="trailing" id="hnm-0r-rH0"/>
-                <constraint firstItem="9Fr-CK-eVy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iNl-IA-olx"/>
                 <constraint firstAttribute="trailing" secondItem="qkJ-sG-lRU" secondAttribute="trailing" id="tcR-Hg-TL5"/>
-                <constraint firstAttribute="bottom" secondItem="9Fr-CK-eVy" secondAttribute="bottom" id="yRh-uz-XwB"/>
             </constraints>
             <size key="customSize" width="132" height="134"/>
+            <connections>
+                <outlet property="imageViewCell" destination="qkJ-sG-lRU" id="XMU-Gc-4lK"/>
+            </connections>
             <point key="canvasLocation" x="75" y="96"/>
         </collectionViewCell>
     </objects>
