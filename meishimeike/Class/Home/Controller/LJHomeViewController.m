@@ -14,6 +14,8 @@
 #import "LJCirculyHeaderReusableView.h"
 
 #import "LJzhongcanViewController.h" //进入中餐表
+#import "LJcateStartViewController.h"
+
 
 @interface LJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DLCycleBannerViewDelegate>
 /*** 主要 :CollectionView ***/
@@ -50,7 +52,7 @@
     self.dajiaArray = @[@"d1@2x",@"d2@2x",@"d3@2x"];
     self.zhouArray = @[@"z1@2x",@"z2@2x",@"z3@2x",@"z4@2x",];
     self.yangArray = @[@"y1@2x",@"y2@2x",@"y3@2x",@"y4@2x",@"y5@2x",@"y6@2x",@"y7@2x",@"y8@2x",];
-    self.teArray = @[];
+    self.teArray = @[@"t1@2x",@"t2@2x"];
     
 }
 
@@ -140,6 +142,22 @@
         return cell;
     }else if (indexPath.section == 4){
         LJfiveCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJfiveCollectionViewCell" forIndexPath:indexPath];
+        cell.cellImageView.image = [UIImage imageNamed:self.teArray[indexPath.row]];
+        if (indexPath.row == 1) {
+            cell.backBlock = ^(NSInteger tag) {
+                if (tag == 20) {
+                    NSLog(@"炸紫酥肉");
+                }else if (tag == 30){
+                    NSLog(@"松鼠桂鱼");
+                }else if (tag == 40){
+                    NSLog(@"八宝鸭");
+                }
+            };
+        }else {
+            cell.backBlock = ^(NSInteger tag) {
+               NSLog(@"东坡肉");
+            };
+        }
         return cell;
     }
     return nil;
@@ -187,16 +205,11 @@
             LJzhongcanViewController *zhongcan = [[LJzhongcanViewController alloc] init];
             [self.navigationController pushViewController:zhongcan animated:YES];
         }
-    }else if (indexPath.section == 1){
-        
-    }else if (indexPath.section == 2){
-        
-    }else if (indexPath.section == 3){
-        
-    }else if (indexPath.section == 4){
-        
+    }else {
+       LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
+       [self.navigationController pushViewController:cate animated:YES]; 
     }
-    NSLog(@"%zd",indexPath.item);
+    
 }
 
 #pragma mark --UICollectionViewDelegateFlowLayout

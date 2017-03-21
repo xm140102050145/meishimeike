@@ -22,16 +22,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="143" height="112"/>
                         <color key="backgroundColor" red="1" green="0.85560312029999996" blue="0.26935232790000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
+                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7N-C1-R6o">
+                        <rect key="frame" x="0.0" y="0.0" width="143" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="fTy-tc-Wre"/>
+                        </constraints>
+                        <connections>
+                            <action selector="c1:" destination="gTV-IL-0wX" eventType="touchUpInside" id="y6t-yB-KIs"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-Xv-dGc">
+                        <rect key="frame" x="0.0" y="70" width="71.5" height="42"/>
+                        <connections>
+                            <action selector="c2:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0wW-oV-POm"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-EL-qMN">
+                        <rect key="frame" x="71.5" y="70" width="71.5" height="42"/>
+                        <connections>
+                            <action selector="c3:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vDi-0C-DSl"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Znw-Xv-dGc" secondAttribute="bottom" id="0JV-SY-tMU"/>
+                <constraint firstItem="d7N-C1-R6o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CNb-7u-Akj"/>
+                <constraint firstItem="Znw-Xv-dGc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dmv-sm-21n"/>
+                <constraint firstAttribute="bottom" secondItem="KoL-EL-qMN" secondAttribute="bottom" id="Kh7-CV-RWm"/>
+                <constraint firstAttribute="trailing" secondItem="d7N-C1-R6o" secondAttribute="trailing" id="OBb-sj-ZM4"/>
                 <constraint firstItem="VJC-Po-OKx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qep-Bc-1hI"/>
+                <constraint firstItem="Znw-Xv-dGc" firstAttribute="top" secondItem="d7N-C1-R6o" secondAttribute="bottom" id="TN4-p3-bhU"/>
+                <constraint firstItem="d7N-C1-R6o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XW4-Po-zci"/>
+                <constraint firstItem="KoL-EL-qMN" firstAttribute="leading" secondItem="Znw-Xv-dGc" secondAttribute="trailing" id="aVH-nm-qHf"/>
                 <constraint firstAttribute="trailing" secondItem="VJC-Po-OKx" secondAttribute="trailing" id="dUg-Ra-pkm"/>
+                <constraint firstAttribute="trailing" secondItem="KoL-EL-qMN" secondAttribute="trailing" id="eUl-6Y-TKT"/>
                 <constraint firstItem="VJC-Po-OKx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="egh-ke-np6"/>
+                <constraint firstItem="Znw-Xv-dGc" firstAttribute="width" secondItem="KoL-EL-qMN" secondAttribute="width" id="oAQ-lp-TE1"/>
+                <constraint firstItem="KoL-EL-qMN" firstAttribute="top" secondItem="d7N-C1-R6o" secondAttribute="bottom" id="oh6-x6-Aam"/>
                 <constraint firstAttribute="bottom" secondItem="VJC-Po-OKx" secondAttribute="bottom" id="xjx-so-hxs"/>
             </constraints>
             <size key="customSize" width="143" height="112"/>
-            <point key="canvasLocation" x="80.5" y="85"/>
+            <connections>
+                <outlet property="btn1" destination="d7N-C1-R6o" id="nZy-Z4-1Yn"/>
+                <outlet property="btn2" destination="Znw-Xv-dGc" id="RBR-56-hNg"/>
+                <outlet property="btn3" destination="KoL-EL-qMN" id="Ane-RP-Z7K"/>
+                <outlet property="cellImageView" destination="VJC-Po-OKx" id="Kwt-Tj-dIJ"/>
+            </connections>
+            <point key="canvasLocation" x="-109.5" y="-31"/>
         </collectionViewCell>
     </objects>
 </document>

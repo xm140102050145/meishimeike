@@ -36,10 +36,10 @@
     self.secondTextField.keyboardType = UIKeyboardTypePhonePad;
     [self.Button setTitle:@"下一步" forState:UIControlStateNormal];
     //获取验证码的按钮
-    UIButton *verfityBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.secondTextField.lj_right + spaceEdgeW(10), 0, spaceEdgeW(85), spaceEdgeH(25))];
+    UIButton *verfityBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.secondTextField.lj_right + spaceEdgeW(13), 0, spaceEdgeW(85), spaceEdgeH(25))];
     [verfityBtn setTitleColor:LJFontColor88 forState:UIControlStateNormal];
     [verfityBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [verfityBtn.titleLabel setFont:LJFontSize14];
+    [verfityBtn.titleLabel setFont:LJFontSize12];
     verfityBtn.layer.borderColor = LJFontColor88.CGColor;
     verfityBtn.layer.borderWidth = 0.5f;
     [verfityBtn setLayerWithCr:spaceEdgeW(12)];

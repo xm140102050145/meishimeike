@@ -11,4 +11,5 @@
 
 @interface LJNewsTableViewCell : UITableViewCell
 @property (nonatomic,strong) LJNewsModel *newsModel;
+
 @end

@@ -14,5 +14,20 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)c1:(UIButton *)sender {
+    if (self.backBlock) {
+        self.backBlock(sender.tag);
+    }
+}
+- (IBAction)c2:(UIButton *)sender {
+    if (self.backBlock) {
+        self.backBlock(sender.tag);
+    }
+}
+- (IBAction)c3:(UIButton *)sender {
+    if (self.backBlock) {
+        self.backBlock(sender.tag);
+    }
+}
 
 @end

@@ -28,7 +28,6 @@
         self.newsArr = [LJNewsModel mj_objectArrayWithKeyValuesArray:data];
         [self.newsTableView reloadData];
     }];
-    
 }
 
 - (void)CycleBannerView {

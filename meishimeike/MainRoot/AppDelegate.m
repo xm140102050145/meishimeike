@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.frame = [[UIScreen mainScreen] bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[LJRootViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;

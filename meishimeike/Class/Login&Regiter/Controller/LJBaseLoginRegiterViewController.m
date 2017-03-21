@@ -108,7 +108,7 @@
     //协议字
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.protocolAgreeBtn.lj_right + spaceEdgeW(3), 0, 0, spaceEdgeH(15))];
     label.text = @"我已阅读并同意条款与协议";
-    label.font = LJFontSize14;
+    label.font = LJFontSize12;
     label.textColor = LJFontColor88;
     [label sizeToFit];
     label.lj_centerY = self.protocolAgreeBtn.lj_centerY;

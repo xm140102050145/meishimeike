@@ -30,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = LJCommonBgColor;
+    self.navigationItem.title = @"中餐";
     [self loadData];                 // 1.加载数据
     [self addChildVc];
     [self setScrollviewBannerAttribute];// 2.设置ScrollView和Banner属性设置

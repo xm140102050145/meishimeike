@@ -14,9 +14,8 @@
 - (UIButton*)publishButton{
     if (!_publishButton) {
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        publishButton.backgroundColor = [UIColor redColor];
-        [publishButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [publishButton setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
+        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateNormal];
+        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateSelected];
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishButton];
         _publishButton=publishButton;
@@ -46,14 +45,14 @@
         // 过滤掉非UITabBarButton
         if (subview.class != NSClassFromString(@"UITabBarButton")) continue;
         //设置控件frame
-        CGFloat TabBarBtnX = TabBarBtnIndex*buttonW;
+        CGFloat TabBarBtnX = TabBarBtnIndex * buttonW;
         //让tabBar上第一个控件选中状态
         if (TabBarBtnX == 0) {
             UIButton *item = (UIButton *)subview;
             item.selected = YES;
         }
         //为中间的发布按钮空一个位置
-        if (TabBarBtnIndex>=2) {
+        if (TabBarBtnIndex >= 2) {
             TabBarBtnX += buttonW;
         }
         subview.frame = CGRectMake(TabBarBtnX, TabBarBtnY, buttonW, buttonH);
@@ -62,8 +61,8 @@
     /**** 设置中间的发布按钮的frame ****/
     self.publishButton.lj_width = buttonW;
     self.publishButton.lj_height = buttonH;
-    self.publishButton.lj_x = 2*buttonW;
-    self.publishButton.lj_y = 0;
+    self.publishButton.lj_x = 2 * buttonW;
+    self.publishButton.lj_y = - buttonH / 2;
 }
 
 #pragma mark--发布
