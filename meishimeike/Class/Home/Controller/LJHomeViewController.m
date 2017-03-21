@@ -207,6 +207,21 @@
         }
     }else {
        LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
+        if (indexPath.section == 1) {
+            if (indexPath.row == 0) {
+               cate.cateid = @"28";//糖醋里脊
+            }else if (indexPath.row == 1) {
+                
+            }else if (indexPath.row == 2) {
+                
+            }
+        }else if (indexPath.section == 2){
+            
+        }else if (indexPath.section == 3){
+            
+        }else if (indexPath.section == 4){
+            
+        }
        [self.navigationController pushViewController:cate animated:YES]; 
     }
     

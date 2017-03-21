@@ -16,9 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.arr = @[@"zhe1@2x",@"zhe2@2x",@"zhe3@2x",@"zhe4@2x"];
 }
 
+//UICollectionView被选中的时候调用
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
+    if (indexPath.row == 0) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 1) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 2) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 3) {
+        cate.cateid = @"";
+    }
+    [self.navigationController pushViewController:cate animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

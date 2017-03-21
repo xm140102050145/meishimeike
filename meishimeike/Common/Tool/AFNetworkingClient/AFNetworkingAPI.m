@@ -15,7 +15,7 @@
         if ([data isKindOfClass:[NSDictionary class]]) {
             NSDictionary *dic = data;
             if ([dic[@"code"] intValue] == 200) {
-                NSArray *arr = dic[@"result"];
+                id arr = dic[@"result"];
                 requireDataBlock(arr);  //只考虑获取成功后的数据 
             }else {
                 requireDataBlock(dic[@"message"]);

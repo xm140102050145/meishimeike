@@ -22,4 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *catename;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic,strong) NSString *cateid;
+
 @end

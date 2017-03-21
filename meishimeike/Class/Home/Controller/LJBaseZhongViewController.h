@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LJcateStartViewController.h"
 @interface LJBaseZhongViewController : UIViewController
-
+@property (nonatomic,strong) NSArray *arr;
 @end

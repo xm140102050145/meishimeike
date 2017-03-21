@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = LJCommonBgColor;
+    self.arr = @[@"lu1@2x",@"lu2@2x",@"lu3@2x",@"lu4@2x"];
+}
+
+//UICollectionView被选中的时候调用
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
+    if (indexPath.row == 0) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 1) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 2) {
+        cate.cateid = @"";
+    }else if (indexPath.row == 3) {
+        cate.cateid = @"";
+    }
+    [self.navigationController pushViewController:cate animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.arr = [NSMutableArray array];
     [self configureBaseInfo];       //1.配置configureBaseInfo基本属性
     [self configureCollectionView]; //2.配置collectionView属性
 }
@@ -54,11 +55,12 @@
 }
 //每组多少个cell
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return self.arr.count;
 }
 //显示cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LJZhongcanCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJZhongcanCollectionViewCell" forIndexPath:indexPath];
+    cell.ImageView.image = [UIImage imageNamed:self.arr[indexPath.row]];
     return cell;
 }
 
