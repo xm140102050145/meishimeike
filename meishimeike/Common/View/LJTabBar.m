@@ -14,8 +14,8 @@
 - (UIButton*)publishButton{
     if (!_publishButton) {
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateNormal];
-        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateSelected];
+        [publishButton setImage:[UIImage imageNamed:@"home_add_icon"] forState:UIControlStateNormal];
+        [publishButton setImage:[UIImage imageNamed:@"home_add_icon"] forState:UIControlStateSelected];
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishButton];
         _publishButton=publishButton;
