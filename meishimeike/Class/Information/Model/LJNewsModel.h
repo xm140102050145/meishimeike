@@ -10,9 +10,6 @@
 
 @interface LJNewsModel : NSObject
 
-@property (nonatomic,strong) NSString *news_id;
-@property (nonatomic,strong) NSString *news_title;
-@property (nonatomic,strong) NSString *news_image;
-@property (nonatomic,strong) NSString *news_prief;
-@property (nonatomic,strong) NSString *news_time;
+@property (nonatomic,strong) NSString *cate_name;
+@property (nonatomic,strong) NSString *cate_stepvideo;
 @end

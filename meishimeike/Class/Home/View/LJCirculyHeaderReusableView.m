@@ -21,6 +21,7 @@
         self.cycleBannerView.localiztionImagesArray = imagesArray;
         self.cycleBannerView.placeholderImage = [UIImage imageNamed:@"homepagebannerplaceholder"];
         [self addSubview:self.cycleBannerView];
+
     }
     return self;
 }

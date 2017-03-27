@@ -42,6 +42,7 @@ NSString *const Fruit = @"http://192.168.3.17:8888/meishimeike/index.php/home/Us
 NSString *const Requrecate = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/requrecate";
 /*** 做菜页面数据获取  ***/
 NSString *const Requrededatil = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/requrededatil";
+NSString *const Videocate = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/videocate";
 /*** 收藏  ***/
 NSString *const Collect = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/collect";
 /*** 查询我的收藏  ***/

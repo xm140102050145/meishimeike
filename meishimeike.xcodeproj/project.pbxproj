@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1409356C1E88C2260042A067 /* LJLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409356B1E88C2260042A067 /* LJLearnViewController.m */; };
+		1409357B1E8919F20042A067 /* DLVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409356F1E8919F20042A067 /* DLVideoPlayView.m */; };
+		1409357C1E8919F20042A067 /* home_play_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935701E8919F20042A067 /* home_play_icon@2x.png */; };
+		1409357D1E8919F20042A067 /* home_shoucang_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935711E8919F20042A067 /* home_shoucang_icon@2x.png */; };
+		1409357E1E8919F20042A067 /* icmpv_back_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935721E8919F20042A067 /* icmpv_back_light.png */; };
+		1409357F1E8919F20042A067 /* icmpv_back_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935731E8919F20042A067 /* icmpv_back_light@2x.png */; };
+		140935801E8919F20042A067 /* icmpv_thumb_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935741E8919F20042A067 /* icmpv_thumb_light@2x.png */; };
+		140935811E8919F20042A067 /* player_fullScreen_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935751E8919F20042A067 /* player_fullScreen_iphone@2x.png */; };
+		140935821E8919F20042A067 /* player_fullScreen_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935761E8919F20042A067 /* player_fullScreen_iphone@3x.png */; };
+		140935831E8919F20042A067 /* player_window_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935771E8919F20042A067 /* player_window_iphone@2x.png */; };
+		140935841E8919F20042A067 /* player_window_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 140935781E8919F20042A067 /* player_window_iphone@3x.png */; };
+		140935851E8919F20042A067 /* RotationScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409357A1E8919F20042A067 /* RotationScreen.m */; };
+		140935881E891C690042A067 /* LJSuosuoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140935871E891C690042A067 /* LJSuosuoTableViewCell.m */; };
+		1409358B1E891F640042A067 /* LJSuoSuoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409358A1E891F640042A067 /* LJSuoSuoModel.m */; };
+		1409358E1E891FAD0042A067 /* LJCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409358D1E891FAD0042A067 /* LJCommentModel.m */; };
+		140935911E8923150042A067 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 140935901E8923150042A067 /* NSString+Extension.m */; };
+		140935951E8932ED0042A067 /* LJcommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140935931E8932ED0042A067 /* LJcommentTableViewCell.m */; };
 		14193B551E0A29D500B0F28D /* meishimeikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B541E0A29D500B0F28D /* meishimeikeTests.m */; };
 		14193B601E0A29D500B0F28D /* meishimeikeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B5F1E0A29D500B0F28D /* meishimeikeUITests.m */; };
 		14193B801E0A3CFF00B0F28D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B761E0A3CFF00B0F28D /* main.m */; };
@@ -141,6 +158,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1409356A1E88C2260042A067 /* LJLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLearnViewController.h; sourceTree = "<group>"; };
+		1409356B1E88C2260042A067 /* LJLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLearnViewController.m; sourceTree = "<group>"; };
+		1409356E1E8919F20042A067 /* DLVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLVideoPlayView.h; sourceTree = "<group>"; };
+		1409356F1E8919F20042A067 /* DLVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLVideoPlayView.m; sourceTree = "<group>"; };
+		140935701E8919F20042A067 /* home_play_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_play_icon@2x.png"; sourceTree = "<group>"; };
+		140935711E8919F20042A067 /* home_shoucang_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_shoucang_icon@2x.png"; sourceTree = "<group>"; };
+		140935721E8919F20042A067 /* icmpv_back_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icmpv_back_light.png; sourceTree = "<group>"; };
+		140935731E8919F20042A067 /* icmpv_back_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icmpv_back_light@2x.png"; sourceTree = "<group>"; };
+		140935741E8919F20042A067 /* icmpv_thumb_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icmpv_thumb_light@2x.png"; sourceTree = "<group>"; };
+		140935751E8919F20042A067 /* player_fullScreen_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_fullScreen_iphone@2x.png"; sourceTree = "<group>"; };
+		140935761E8919F20042A067 /* player_fullScreen_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_fullScreen_iphone@3x.png"; sourceTree = "<group>"; };
+		140935771E8919F20042A067 /* player_window_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_window_iphone@2x.png"; sourceTree = "<group>"; };
+		140935781E8919F20042A067 /* player_window_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_window_iphone@3x.png"; sourceTree = "<group>"; };
+		140935791E8919F20042A067 /* RotationScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationScreen.h; sourceTree = "<group>"; };
+		1409357A1E8919F20042A067 /* RotationScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationScreen.m; sourceTree = "<group>"; };
+		140935861E891C690042A067 /* LJSuosuoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJSuosuoTableViewCell.h; path = meishimeike/Class/Home/Controller/LJSuosuoTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		140935871E891C690042A067 /* LJSuosuoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJSuosuoTableViewCell.m; path = meishimeike/Class/Home/Controller/LJSuosuoTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		140935891E891F640042A067 /* LJSuoSuoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJSuoSuoModel.h; path = meishimeike/Class/Home/Controller/LJSuoSuoModel.h; sourceTree = SOURCE_ROOT; };
+		1409358A1E891F640042A067 /* LJSuoSuoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJSuoSuoModel.m; path = meishimeike/Class/Home/Controller/LJSuoSuoModel.m; sourceTree = SOURCE_ROOT; };
+		1409358C1E891FAD0042A067 /* LJCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJCommentModel.h; path = meishimeike/Class/Home/Controller/LJCommentModel.h; sourceTree = SOURCE_ROOT; };
+		1409358D1E891FAD0042A067 /* LJCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJCommentModel.m; path = meishimeike/Class/Home/Controller/LJCommentModel.m; sourceTree = SOURCE_ROOT; };
+		1409358F1E8923150042A067 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		140935901E8923150042A067 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		140935921E8932ED0042A067 /* LJcommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJcommentTableViewCell.h; path = meishimeike/Class/Home/Controller/LJcommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		140935931E8932ED0042A067 /* LJcommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJcommentTableViewCell.m; path = meishimeike/Class/Home/Controller/LJcommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		14193B371E0A29D400B0F28D /* meishimeike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meishimeike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14193B501E0A29D500B0F28D /* meishimeikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meishimeikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14193B541E0A29D500B0F28D /* meishimeikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meishimeikeTests.m; sourceTree = "<group>"; };
@@ -373,9 +415,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140935691E88C1C80042A067 /* learnCate */ = {
+			isa = PBXGroup;
+			children = (
+				1409356A1E88C2260042A067 /* LJLearnViewController.h */,
+				1409356B1E88C2260042A067 /* LJLearnViewController.m */,
+			);
+			name = learnCate;
+			sourceTree = "<group>";
+		};
+		1409356D1E8919F20042A067 /* DLVideoPlayView */ = {
+			isa = PBXGroup;
+			children = (
+				1409356E1E8919F20042A067 /* DLVideoPlayView.h */,
+				1409356F1E8919F20042A067 /* DLVideoPlayView.m */,
+				140935701E8919F20042A067 /* home_play_icon@2x.png */,
+				140935711E8919F20042A067 /* home_shoucang_icon@2x.png */,
+				140935721E8919F20042A067 /* icmpv_back_light.png */,
+				140935731E8919F20042A067 /* icmpv_back_light@2x.png */,
+				140935741E8919F20042A067 /* icmpv_thumb_light@2x.png */,
+				140935751E8919F20042A067 /* player_fullScreen_iphone@2x.png */,
+				140935761E8919F20042A067 /* player_fullScreen_iphone@3x.png */,
+				140935771E8919F20042A067 /* player_window_iphone@2x.png */,
+				140935781E8919F20042A067 /* player_window_iphone@3x.png */,
+				140935791E8919F20042A067 /* RotationScreen.h */,
+				1409357A1E8919F20042A067 /* RotationScreen.m */,
+			);
+			path = DLVideoPlayView;
+			sourceTree = "<group>";
+		};
 		14193B2E1E0A29D400B0F28D = {
 			isa = PBXGroup;
 			children = (
+				1409356D1E8919F20042A067 /* DLVideoPlayView */,
 				14193B391E0A29D400B0F28D /* meishimeike */,
 				14193B531E0A29D500B0F28D /* meishimeikeTests */,
 				14193B5E1E0A29D500B0F28D /* meishimeikeUITests */,
@@ -441,6 +513,8 @@
 		14193B6F1E0A3CFF00B0F28D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1409358F1E8923150042A067 /* NSString+Extension.h */,
+				140935901E8923150042A067 /* NSString+Extension.m */,
 				147C84AE1E800DDF0056AA6F /* UIView+LJExtension.h */,
 				147C84AF1E800DDF0056AA6F /* UIView+LJExtension.m */,
 				1469A75C1E4F5EE700395821 /* UIBarButtonItem+LJExtension.h */,
@@ -674,6 +748,10 @@
 		147C84BC1E802EC10056AA6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				140935891E891F640042A067 /* LJSuoSuoModel.h */,
+				1409358A1E891F640042A067 /* LJSuoSuoModel.m */,
+				1409358C1E891FAD0042A067 /* LJCommentModel.h */,
+				1409358D1E891FAD0042A067 /* LJCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -681,6 +759,10 @@
 		147C84BD1E802EC10056AA6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				140935861E891C690042A067 /* LJSuosuoTableViewCell.h */,
+				140935871E891C690042A067 /* LJSuosuoTableViewCell.m */,
+				140935921E8932ED0042A067 /* LJcommentTableViewCell.h */,
+				140935931E8932ED0042A067 /* LJcommentTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -698,6 +780,7 @@
 		147C84BF1E802EC10056AA6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				140935691E88C1C80042A067 /* learnCate */,
 				14BC7F801E8126970089B875 /* cateDetail */,
 				147C85111E8032380056AA6F /* zhongcan */,
 				147C84C01E802EC10056AA6F /* LJHomeViewController.h */,
@@ -1081,6 +1164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140935831E8919F20042A067 /* player_window_iphone@2x.png in Resources */,
 				1482EA891E7AF333005D234E /* y1@2x.png in Resources */,
 				14BC7F9F1E816F230089B875 /* zhe2@2x.png in Resources */,
 				1482EA8B1E7AF333005D234E /* y3@2x.png in Resources */,
@@ -1091,11 +1175,14 @@
 				147C84FC1E802EC10056AA6F /* LJWeDoCollectionViewCell.xib in Resources */,
 				14BC7F791E8121840089B875 /* t2@2x.png in Resources */,
 				14BC7F751E811F4A0089B875 /* LJfiveCollectionViewCell.xib in Resources */,
+				1409357D1E8919F20042A067 /* home_shoucang_icon@2x.png in Resources */,
 				14BC7F701E811E9C0089B875 /* z1@2x.png in Resources */,
 				14BC7F651E810F780089B875 /* LJZhongcanCollectionViewCell.xib in Resources */,
+				140935811E8919F20042A067 /* player_fullScreen_iphone@2x.png in Resources */,
 				1482EA8C1E7AF333005D234E /* y4@2x.png in Resources */,
 				14BC7F781E8121840089B875 /* t1@2x.png in Resources */,
 				14BC7F9E1E816F230089B875 /* zhe1@2x.png in Resources */,
+				1409357C1E8919F20042A067 /* home_play_icon@2x.png in Resources */,
 				1482EA8F1E7AF333005D234E /* y7@2x.png in Resources */,
 				1482EA8E1E7AF333005D234E /* y6@2x.png in Resources */,
 				1482EA901E7AF333005D234E /* y8@2x.png in Resources */,
@@ -1105,15 +1192,20 @@
 				14BC7FA11E816F230089B875 /* zhe4@2x.png in Resources */,
 				1482EA8D1E7AF333005D234E /* y5@2x.png in Resources */,
 				14BC7F7E1E81248D0089B875 /* d2@2x.png in Resources */,
+				1409357E1E8919F20042A067 /* icmpv_back_light.png in Resources */,
 				14BC7F881E8127350089B875 /* LJcateStartViewController.xib in Resources */,
 				14BC7F731E811E9C0089B875 /* z4@2x.png in Resources */,
 				14BC7F7B1E8124890089B875 /* d3@2x.png in Resources */,
+				1409357F1E8919F20042A067 /* icmpv_back_light@2x.png in Resources */,
+				140935841E8919F20042A067 /* player_window_iphone@3x.png in Resources */,
 				14BC7FA01E816F230089B875 /* zhe3@2x.png in Resources */,
 				14BC7FA71E81724B0089B875 /* lu2@2x.png in Resources */,
 				147C84F91E802EC10056AA6F /* LJMenuItemCollectionViewCell.xib in Resources */,
 				14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */,
+				140935821E8919F20042A067 /* player_fullScreen_iphone@3x.png in Resources */,
 				14193B821E0A3CFF00B0F28D /* Assets.xcassets in Resources */,
 				14BC7FA61E81724B0089B875 /* lu1@2x.png in Resources */,
+				140935801E8919F20042A067 /* icmpv_thumb_light@2x.png in Resources */,
 				14BC7F721E811E9C0089B875 /* z3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1287,6 +1379,7 @@
 				147C84F81E802EC10056AA6F /* LJMenuItemCollectionViewCell.m in Sources */,
 				147C84B61E8024BA0056AA6F /* LJUserModel.m in Sources */,
 				147C84291E7FF8B60056AA6F /* NSObject+MJKeyValue.m in Sources */,
+				140935881E891C690042A067 /* LJSuosuoTableViewCell.m in Sources */,
 				147C845E1E7FF9800056AA6F /* UIView+WebCacheOperation.m in Sources */,
 				14193B801E0A3CFF00B0F28D /* main.m in Sources */,
 				147C84531E7FF9800056AA6F /* SDWebImageDecoder.m in Sources */,
@@ -1294,6 +1387,7 @@
 				147C84721E80005E0056AA6F /* NSData+DLExtension.m in Sources */,
 				147C84561E7FF9800056AA6F /* SDWebImageManager.m in Sources */,
 				147C842A1E7FF8B60056AA6F /* NSObject+MJProperty.m in Sources */,
+				1409356C1E88C2260042A067 /* LJLearnViewController.m in Sources */,
 				147C84F41E802EC10056AA6F /* LJHomeViewController.m in Sources */,
 				147C845C1E7FF9800056AA6F /* UIImageView+HighlightedWebCache.m in Sources */,
 				147C84FB1E802EC10056AA6F /* LJWeDoCollectionViewCell.m in Sources */,
@@ -1318,16 +1412,21 @@
 				147C842B1E7FF8B60056AA6F /* NSString+MJExtension.m in Sources */,
 				147C850A1E802F940056AA6F /* LJzhongcanViewController.m in Sources */,
 				147C85001E802EC10056AA6F /* LJBaseLoginRegiterViewController.m in Sources */,
+				140935951E8932ED0042A067 /* LJcommentTableViewCell.m in Sources */,
 				147C84AA1E800D700056AA6F /* LJTooltip.m in Sources */,
 				147C845B1E7FF9800056AA6F /* UIImage+WebP.m in Sources */,
+				1409358E1E891FAD0042A067 /* LJCommentModel.m in Sources */,
 				147C84241E7FF8B60056AA6F /* MJProperty.m in Sources */,
 				147C84F31E802EC10056AA6F /* LJFoodCircleViewController.m in Sources */,
 				14BC7F8C1E8137B80089B875 /* LJcateStartTableViewCell.m in Sources */,
+				1409357B1E8919F20042A067 /* DLVideoPlayView.m in Sources */,
 				147C851A1E80327B0056AA6F /* LJSuViewController.m in Sources */,
 				147C84571E7FF9800056AA6F /* SDWebImagePrefetcher.m in Sources */,
 				147C85021E802EC10056AA6F /* LJForgetPasswordViewController.m in Sources */,
+				140935911E8923150042A067 /* NSString+Extension.m in Sources */,
 				147C85041E802EC10056AA6F /* LJProtocolViewController.m in Sources */,
 				147C84711E80005E0056AA6F /* DLCycleBannerViewCell.m in Sources */,
+				140935851E8919F20042A067 /* RotationScreen.m in Sources */,
 				147C85031E802EC10056AA6F /* LJLoginViewController.m in Sources */,
 				147C845A1E7FF9800056AA6F /* UIImage+MultiFormat.m in Sources */,
 				147C84521E7FF9800056AA6F /* SDWebImageCompat.m in Sources */,
@@ -1336,6 +1435,7 @@
 				1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */,
 				147C842C1E7FF8B60056AA6F /* README.md in Sources */,
 				147C84FF1E802EC10056AA6F /* LJNewsTableViewCell.m in Sources */,
+				1409358B1E891F640042A067 /* LJSuoSuoModel.m in Sources */,
 				147C85171E80326D0056AA6F /* LJZheViewController.m in Sources */,
 				1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */,
 				147C851D1E80328A0056AA6F /* LJChuanViewController.m in Sources */,

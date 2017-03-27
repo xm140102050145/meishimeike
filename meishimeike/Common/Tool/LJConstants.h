@@ -47,6 +47,7 @@ extern NSString *const Fruit;
 extern NSString *const Requrecate ;
 /*** 做菜页面数据获取  ***/
 extern NSString *const Requrededatil;
+extern NSString *const Videocate;
 /*** 收藏  ***/
 extern NSString *const Collect ;
 /*** 查询我的收藏  ***/

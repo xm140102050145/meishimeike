@@ -9,6 +9,7 @@
 #import "LJcateStartViewController.h"
 #import "LJcateStartTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "LJLearnViewController.h"
 
 @interface LJcateStartViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSString *cate_tapy; //类型1是图文，2是视频
@@ -70,7 +71,13 @@
 
 - (IBAction)StatBtn:(UIButton *)sender {
     //将self.cateid  和  self.cate_tapy 传到下一个界面进行教程获取
-    NSLog(@"self.cateid:%@    self.cate_tapy:%@",self.cateid,self.cate_tapy);
+    LJLearnViewController *learnView = [[LJLearnViewController alloc] init];
+    learnView.cateid = self.cateid;
+    learnView.catetype = self.cate_tapy;
+    learnView.userName = self.OwnNameLabel.text;
+    learnView.userImage = self.cateImageSmallView.image;
+    learnView.cateName = self.catename.text;
+    [self.navigationController pushViewController:learnView animated:YES];
 }
 
 

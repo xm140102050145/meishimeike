@@ -7,16 +7,10 @@
 //
 
 #import "LJNewsTableViewCell.h"
+#import "DLVideoPlayView.h"
 @interface LJNewsTableViewCell ()
-/*** 图片 ***/
-@property (nonatomic,strong) UIImageView *newsImageView;
-/*** 标题 ***/
-@property (nonatomic,strong) UILabel *titleLabel;
-/*** 摘要 ***/
-@property (nonatomic,strong) UILabel *priefLabel;
-/*** 时间 ***/
-@property (nonatomic,strong) UILabel *timeLabel;
 
+@property (nonatomic,strong) DLVideoPlayView *playView;
 
 @end
 @implementation LJNewsTableViewCell
@@ -27,60 +21,36 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        /*** 图片 ***/
-        self.newsImageView = [[UIImageView alloc] init];
-        [self.contentView addSubview:self.newsImageView];
-        [self.newsImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(10);
-            make.top.mas_equalTo(10);
-            make.width.height.mas_equalTo(80);
-        }];
-        /*** 标题 ***/
-        self.titleLabel = [[UILabel alloc] init];
-        [self.titleLabel setFont:[UIFont systemFontOfSize:16 weight:1]];
-        self.titleLabel.text = @"yyy文字";
-        [self.contentView addSubview:self.titleLabel];
-        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.newsImageView.mas_right).offset(5);
-            make.top.mas_equalTo(10);
-            make.width.mas_equalTo(self.contentView.lj_width - 100);
-            make.height.mas_equalTo(18);
-        }];
-        /*** 摘要 ***/
-        self.priefLabel = [[UILabel alloc] init];
-        [self.priefLabel setFont:[UIFont systemFontOfSize:14 weight:0.2]];
-        self.priefLabel.text = @"dhfadshflhjdsfhjdsfhdsfjhasjdfhlj一瑁践 残疾证中ugjjkhgjkghjgjgjgjhgjgjgjhgjh";
-        self.priefLabel.numberOfLines = 0;
-        [self.priefLabel sizeToFit];
-        [self.contentView addSubview:self.priefLabel];
-        [self.priefLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.newsImageView.mas_right).offset(5);
-            make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(5);
-            make.width.mas_equalTo(self.contentView.lj_width - 100);
-            make.height.mas_equalTo(50);
-        }];
-        /*** 时间 ***/
-        self.timeLabel = [[UILabel alloc] init];
-        [self.timeLabel setFont:[UIFont systemFontOfSize:12]];
-        self.timeLabel.text = @"2017-02-12";
-        [self.timeLabel sizeToFit];
-        [self.contentView addSubview:self.timeLabel];
-        [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.priefLabel.mas_bottom).offset(2);
-            make.right.mas_equalTo(self.contentView.mas_right).offset(-5);
-            make.height.mas_equalTo(10);
-        }];     
+                self.playView = [[DLVideoPlayView alloc] init];
+                [self addSubview:self.playView];
+                [self.playView.collectBtn addTarget:self action:@selector(collectClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+        __weak typeof(self)weakSeaf = self;
+        self.playView.frame = self.contentView.bounds;
+        self.playView.viewbackframe = ^ (UIView *view) {
+            view.frame = weakSeaf.contentView.bounds;
+            [weakSeaf.contentView addSubview:view];
+        };
+}
+
+- (void)collectClick:(UIButton *)sender {
+    
+}
+
 - (void)setNewsModel:(LJNewsModel *)newsModel {
     _newsModel = newsModel;
-    NSURL *imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",newsUrl,newsModel.news_image]];
-    [self.newsImageView sd_setImageWithURL:imageUrl];
-    self.titleLabel.text = newsModel.news_title;
-    self.priefLabel.text = newsModel.news_prief;
-    self.timeLabel.text = newsModel.news_time;
+        self.playView.titleLabel.text = _newsModel.cate_name;
+        self.playView.URLStr = [NSURL URLWithString:_newsModel.cate_stepvideo];
+    [self.playView playVideoWithURL];
+}
+
+- (void)dealloc {
+    self.playView = nil;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

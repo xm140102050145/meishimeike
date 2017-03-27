@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DLCycleBannerView.h"
+
+
 @interface LJCirculyHeaderReusableView : UICollectionReusableView
 
 @property (nonatomic,strong) DLCycleBannerView *cycleBannerView;

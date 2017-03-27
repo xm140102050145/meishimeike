@@ -24,20 +24,20 @@
     /*** 子控制器  ***/
     NSArray *childVCArray = @[@{kClassKey:@"LJHomeViewController",
                                 kTitleKey:@"首页",
-                                kImageKey:@"",
-                                kSelImageKey:@""},
+                                kImageKey:@"home_icon",
+                                kSelImageKey:@"home_selected_icon"},
                               @{kClassKey:@"LJInfoViewController",
-                                kTitleKey:@"资讯",
-                                kImageKey:@"",
-                                kSelImageKey:@""},
+                                kTitleKey:@"厨艺",
+                                kImageKey:@"home_cook_icon",
+                                kSelImageKey:@"home_cook_selected_icon"},
                               @{kClassKey:@"LJFoodCircleViewController",
-                                kTitleKey:@"美食圈",
-                                kImageKey:@"",
-                                kSelImageKey:@""},
+                                kTitleKey:@"圈儿",
+                                kImageKey:@"home_share_icon",
+                                kSelImageKey:@"home_share_selected_icon"},
                               @{kClassKey:@"LJMeViewController",
                                 kTitleKey:@"我的",
-                                kImageKey:@"",
-                                kSelImageKey:@""}];
+                                kImageKey:@"home_me_icon",
+                                kSelImageKey:@"home_me_selected_icon"}];
     [childVCArray enumerateObjectsUsingBlock:^(NSDictionary *dic, NSUInteger idx, BOOL * _Nonnull stop) {
         UIViewController *Vc = [NSClassFromString(dic[kClassKey]) new];
         Vc.title = dic[kTitleKey];

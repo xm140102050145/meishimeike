@@ -14,7 +14,7 @@
 @interface LJInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView *newsTableView;
-@property (nonatomic,strong) NSArray *newsArr;
+@property (nonatomic,strong) NSMutableArray *newsArr;
 @end
 
 @implementation LJInfoViewController
@@ -23,9 +23,14 @@
     [super viewDidLoad];
     [self newsTableView];
     [self CycleBannerView];
-    NSString *url = [NSString stringWithFormat:@"%@/newsid/0",News];
-    [AFNetworkingAPI getWithPath:url Params:nil requrieDataBack:^(id  _Nonnull data) {
-        self.newsArr = [LJNewsModel mj_objectArrayWithKeyValuesArray:data];
+    [AFNetworkingAPI getWithPath:Videocate Params:nil requrieDataBack:^(id  _Nonnull data) {
+        NSArray *arr = [LJNewsModel mj_objectArrayWithKeyValuesArray:data];
+        for (int i = 0; i <arr.count; i++) {
+            LJNewsModel *model = arr[i];
+            if ((model.cate_stepvideo.length > 0)) {
+                [self.newsArr addObject:model];
+            }
+        }
         [self.newsTableView reloadData];
     }];
 }
@@ -52,7 +57,7 @@
 
 - (NSArray *)newsArr {
     if (!_newsArr) {
-        _newsArr = [NSArray array];
+        _newsArr = [NSMutableArray array];
     }
     return _newsArr;
 }
@@ -63,7 +68,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 170;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,6 +83,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+- (void)dealloc
+{
+    self.tableView = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.tableView = nil;
 }
 
 - (void)didReceiveMemoryWarning {

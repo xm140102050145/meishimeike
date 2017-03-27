@@ -14,8 +14,8 @@
 - (UIButton*)publishButton{
     if (!_publishButton) {
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateNormal];
-        [publishButton setImage:[UIImage imageNamed:@"home_star_icon"] forState:UIControlStateSelected];
+        [publishButton setImage:[UIImage imageNamed:@"home_add_icon"] forState:UIControlStateNormal];
+        [publishButton setImage:[UIImage imageNamed:@"home_add_icon"] forState:UIControlStateSelected];
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishButton];
         _publishButton=publishButton;
@@ -62,11 +62,12 @@
     self.publishButton.lj_width = buttonW;
     self.publishButton.lj_height = buttonH;
     self.publishButton.lj_x = 2 * buttonW;
-    self.publishButton.lj_y = - buttonH / 2;
+    self.publishButton.lj_y = - buttonH / 2 + 10;
 }
 
 #pragma mark--发布
 - (void)publishClick {
     LJLogFunc
 }
+
 @end
