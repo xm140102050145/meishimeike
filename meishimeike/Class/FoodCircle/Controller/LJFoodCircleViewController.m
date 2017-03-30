@@ -18,6 +18,9 @@
     [super viewDidLoad];
     self.tableView.lj_height = SCREEN_HEIGHT - 113;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
     [self.tableView registerClass:[LJSuosuoTableViewCell class] forCellReuseIdentifier:@"LJSuosuoTableViewCell"];
     [AFNetworkingAPI getWithPath:Loadsuosuo Params:nil requrieDataBack:^(id  _Nonnull data) {
         self.dataArray = [LJSuoSuoModel mj_objectArrayWithKeyValuesArray:data];

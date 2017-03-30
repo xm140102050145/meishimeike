@@ -71,8 +71,9 @@
         }else{
             [AFNetworkingAPI postWithPath:Login Params:dic requrieDataBack:^(id  _Nonnull data) {
                 USERDEFINE.currentUser = [LJUserModel mj_objectWithKeyValues:data];
+                [self.navigationController popViewControllerAnimated:YES];
             }];
-            [self.navigationController popViewControllerAnimated:YES];
+            
         }  
     }
 }

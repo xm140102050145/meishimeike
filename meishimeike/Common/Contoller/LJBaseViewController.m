@@ -17,12 +17,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = LJCommonBgColor;
     self.automaticallyAdjustsScrollViewInsets = NO;  //去留白
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 10) style:UITableViewStylePlain];
     self.tableView.backgroundColor = LJCommonBgColor;
     self.tableView.allowsMultipleSelection = YES; //允许多选
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
+    
+    self.dataArray = [NSMutableArray array];
+    self.tableView.tableFooterView = [[UIView alloc] init];
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
+//    [self.view addSubview:self.tableView];
 }
     
 #pragma mark --数据获取
