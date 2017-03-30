@@ -6,7 +6,11 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "filename" : "home_add_icon@3x.png",
+=======
+      "filename" : "home_add_icon@2x.png",
+>>>>>>> d0b09e80aed831d3f14de25ef37d97a304f4e168
       "scale" : "2x"
     },
     {

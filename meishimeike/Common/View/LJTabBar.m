@@ -7,6 +7,7 @@
 //
 
 #import "LJTabBar.h"
+#import "LJBaseNavigationController.h"
 
 @implementation LJTabBar
 
@@ -67,7 +68,15 @@
 
 #pragma mark--发布
 - (void)publishClick {
-    LJLogFunc
+    UIViewController *vc = [NSClassFromString(@"LJPublishViewController") new];
+    vc.title = @"发布教程";
+    LJBaseNavigationController *baseNavigation = [[LJBaseNavigationController alloc] initWithRootViewController:vc];
+    baseNavigation.view.frame = LJwindow.bounds;
+    baseNavigation.view.lj_y = LJwindow.lj_height;
+    [UIView animateWithDuration:0.3 animations:^{
+        baseNavigation.view.lj_y = 0;
+        [LJwindow addSubview:baseNavigation.view];
+    }];
 }
 
 @end
