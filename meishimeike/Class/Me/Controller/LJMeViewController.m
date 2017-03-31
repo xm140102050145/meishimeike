@@ -9,7 +9,7 @@
 #import "LJMeViewController.h"
 #import "LJOrderStatusTableViewCell.h"
 #import "LJOrderBaseViewController.h"
-@interface LJMeViewController ()<UINavigationControllerDelegate>
+@interface LJMeViewController ()
 /*** 背景视图 ***/
 @property (nonatomic,strong) UIView *backgroundView;
 /*** 背景图片 ***/
@@ -18,10 +18,6 @@
 @property (nonatomic,strong) UIImageView *headerImageView;
 /*** 用户昵称 ***/
 @property (nonatomic,strong) UILabel *userNameLabel;
-/*** 余额 ***/
-@property (nonatomic,strong) UILabel *balanceLabel;
-/*** 积分 ***/
-@property (nonatomic,strong) UILabel *integralLabel;
 /*** 消息button ***/
 @property (nonatomic,strong) UIButton *messageBtn;
 @end
@@ -39,15 +35,15 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
 #pragma mark --懒加载
 - (UIView *)backgroundView {
     if (!_backgroundView){
-        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, spaceEdgeH(260))];
+        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, spaceEdgeH(240))];
     }
     return _backgroundView;
 }
 
 - (UIImageView *)backgroundImageView {
     if (!_backgroundImageView) {
-        _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, spaceEdgeH(260)-spaceEdgeH(50))];
-        _backgroundImageView.image = [UIImage imageNamed:@"my_background"];
+        _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, spaceEdgeH(240))];
+        _backgroundImageView.image = [UIImage imageNamed:@"me_background_icon"];
         _backgroundImageView.userInteractionEnabled = self;
         [self.backgroundView addSubview:_backgroundImageView];
     }
@@ -106,7 +102,7 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.mas_equalTo(70);
         make.centerX.mas_equalTo(self.backgroundView.mas_centerX);
-        make.centerY.mas_equalTo(self.backgroundView.mas_centerY).offset(-10);
+        make.centerY.mas_equalTo(self.backgroundView.mas_centerY).offset(18);
     }];
     self.headerImageView.layer.masksToBounds = YES; //没这句话它圆不起来
     self.headerImageView.layer.cornerRadius = 70 / 2;
@@ -120,11 +116,10 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
 
 #pragma mark --导航栏设置 
 - (void)setNavigationStatus {
-    self.navigationItem.title = @"";
-    self.navigationController.delegate = self;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
-    view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0];
-    [self.view addSubview:view];
+    self.navigationItem.title = @"我的";
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
+//    view.backgroundColor = [UIColor whiteColor];
+//    [self.view addSubview:view];
     /*** 左边消息图标 ***/
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame= CGRectMake(0, 13, 50, 50);
@@ -142,13 +137,6 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
     [button1 addTarget:self action:@selector(settingBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
 }
-
-#pragma mark --判断是否为当前控制器 
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    BOOL isShowSelf = [viewController isKindOfClass:[self class]];
-    [self.navigationController setNavigationBarHidden:isShowSelf animated:YES];//动画要设为YES，不然界面切换不连贯
-}
-
 
 #pragma mark --消息触发
 - (void)messageBtnClick {
@@ -299,7 +287,7 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
         CGFloat totalOffset = imageH + ABS(offset_Y);  //ABS 是整数绝对值
         self.backgroundImageView.frame = CGRectMake(0, offset_Y, imageW, totalOffset);
     }else{
-        self.backgroundImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.backgroundView.lj_height - spaceEdgeH(50));
+        self.backgroundImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.backgroundView.lj_height);
         }
 }
 
