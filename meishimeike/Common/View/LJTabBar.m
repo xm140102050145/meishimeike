@@ -8,6 +8,7 @@
 
 #import "LJTabBar.h"
 #import "LJBaseNavigationController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation LJTabBar
 
@@ -47,9 +48,12 @@
         if (subview.class != NSClassFromString(@"UITabBarButton")) continue;
         //设置控件frame
         CGFloat TabBarBtnX = TabBarBtnIndex * buttonW;
+        
+        UIButton *item = (UIButton *)subview;
+        [item addTarget:self action:@selector(tabBarButtonClick:) forControlEvents:UIControlEventTouchUpInside];  //点击某个按钮实现的事件
+        
         //让tabBar上第一个控件选中状态
         if (TabBarBtnX == 0) {
-            UIButton *item = (UIButton *)subview;
             item.selected = YES;
         }
         //为中间的发布按钮空一个位置
@@ -77,6 +81,49 @@
         baseNavigation.view.lj_y = 0;
         [LJwindow addSubview:baseNavigation.view];
     }];
+}
+
+- (void)tabBarButtonClick:(UIControl *)tabBarButton {
+    for (UIView *imageView in tabBarButton.subviews) {
+        if ([imageView isKindOfClass:NSClassFromString(@"UITabBarSwappableImageView")]) {
+            //需要实现的帧动画
+            CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+            animation.keyPath = @"transform.scale";
+            animation.values = @[@1.0,@1.3,@0.9,@1.35,@0.95,@1.02,@1.0];
+            animation.duration = 1;
+            animation.calculationMode = kCAAnimationCubic;
+            //把动画添加上去
+            [imageView.layer addAnimation:animation forKey:nil];
+        }
+    }
+    
+    [self playSoundWithSoundName:@"7142.wav"];
+}
+
+- (void)playSoundWithSoundName:(NSString *)soundName {
+    //定义soundID，并先赋值为0
+    SystemSoundID soundID = 0;
+    
+    //先从字典中取出soundID
+    soundID = [self.soundIDs[soundName] unsignedIntValue];
+    
+    //如果从字典获取不到soundName对应的soundID，就创建soundID
+    if (soundID == 0) {
+        //加载音效的URL
+        NSURL *url = [[NSBundle mainBundle] URLForResource:soundName withExtension:nil];
+        
+        //将音效的URL桥接为CFURLRef类型的URL
+        CFURLRef urlRef = (__bridge CFURLRef)(url);
+        
+        //根据音效URL生成对应的SystemSoundID(传soundID的地址，生成之后会根据地址找到它，并赋值)
+        AudioServicesCreateSystemSoundID(urlRef, &soundID);
+        
+        //将这个soundID保存到字典
+        [self.soundIDs setValue:@(soundID) forKey:soundName];
+    }
+    
+    //播放音效
+    AudioServicesPlaySystemSound(soundID);
 }
 
 @end

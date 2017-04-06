@@ -24,6 +24,8 @@
 		1409358E1E891FAD0042A067 /* LJCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409358D1E891FAD0042A067 /* LJCommentModel.m */; };
 		140935911E8923150042A067 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 140935901E8923150042A067 /* NSString+Extension.m */; };
 		140935951E8932ED0042A067 /* LJcommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140935931E8932ED0042A067 /* LJcommentTableViewCell.m */; };
+		140B72551E9649C700245698 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140B72541E9649C700245698 /* AVFoundation.framework */; };
+		140B72581E964B6900245698 /* 7142.wav in Resources */ = {isa = PBXBuildFile; fileRef = 140B72571E964B6900245698 /* 7142.wav */; };
 		14193B551E0A29D500B0F28D /* meishimeikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B541E0A29D500B0F28D /* meishimeikeTests.m */; };
 		14193B601E0A29D500B0F28D /* meishimeikeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B5F1E0A29D500B0F28D /* meishimeikeUITests.m */; };
 		14193B801E0A3CFF00B0F28D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B761E0A3CFF00B0F28D /* main.m */; };
@@ -241,6 +243,8 @@
 		140935901E8923150042A067 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		140935921E8932ED0042A067 /* LJcommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJcommentTableViewCell.h; path = meishimeike/Class/Home/Controller/LJcommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		140935931E8932ED0042A067 /* LJcommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJcommentTableViewCell.m; path = meishimeike/Class/Home/Controller/LJcommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		140B72541E9649C700245698 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		140B72571E964B6900245698 /* 7142.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 7142.wav; sourceTree = "<group>"; };
 		14193B371E0A29D400B0F28D /* meishimeike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meishimeike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14193B501E0A29D500B0F28D /* meishimeikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meishimeikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14193B541E0A29D500B0F28D /* meishimeikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meishimeikeTests.m; sourceTree = "<group>"; };
@@ -564,6 +568,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140B72551E9649C700245698 /* AVFoundation.framework in Frameworks */,
 				CD33804C4668AEDF37DB9DD2 /* libPods-meishimeike.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +619,14 @@
 				1409357A1E8919F20042A067 /* RotationScreen.m */,
 			);
 			path = DLVideoPlayView;
+			sourceTree = "<group>";
+		};
+		140B72561E964B4A00245698 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				140B72571E964B6900245698 /* 7142.wav */,
+			);
+			name = sound;
 			sourceTree = "<group>";
 		};
 		14193B2E1E0A29D400B0F28D = {
@@ -780,6 +793,7 @@
 		14193B7B1E0A3CFF00B0F28D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				140B72561E964B4A00245698 /* sound */,
 				14F401B91E8D00EF00350596 /* Assets.xcassets */,
 				14BC7F911E816EDA0089B875 /* 分类里的图片 */,
 				1482EA6E1E7AF320005D234E /* image */,
@@ -1354,6 +1368,7 @@
 		4C09587A2075EEEE911631F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				140B72541E9649C700245698 /* AVFoundation.framework */,
 				317EDF82A2E663E9AC924CE8 /* libPods-meishimeike.a */,
 				6F5D15885431F4055A9974B6 /* libPods-meishimeikeTests.a */,
 				B8498B6DA9C037115DBE9E86 /* libPods-meishimeikeUITests.a */,
@@ -1514,6 +1529,7 @@
 				1482EA8F1E7AF333005D234E /* y7@2x.png in Resources */,
 				1482EA8E1E7AF333005D234E /* y6@2x.png in Resources */,
 				1482EA901E7AF333005D234E /* y8@2x.png in Resources */,
+				140B72581E964B6900245698 /* 7142.wav in Resources */,
 				147C84211E7FF8B60056AA6F /* LICENSE in Resources */,
 				14BC7F8D1E8137B80089B875 /* LJcateStartTableViewCell.xib in Resources */,
 				1482EA8A1E7AF333005D234E /* y2@2x.png in Resources */,
