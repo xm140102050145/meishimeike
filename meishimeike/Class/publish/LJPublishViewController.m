@@ -29,11 +29,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = LJCommonBgColor;
+    [self addBackBtn];
+}
+
+#pragma mark- 返回键
+- (void)addBackBtn {
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backBtn setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
+    [backBtn sizeToFit];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+}
+
+- (void)backClick {
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 @end

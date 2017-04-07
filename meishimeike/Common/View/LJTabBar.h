@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^presentView)(UIViewController *publishView);
 @interface LJTabBar : UITabBar
 /*** 中间发布按钮  ***/
 @property(nonatomic,strong)UIButton *publishButton;
 /** 可变字典，保存音效ID */
 @property (nonatomic, strong) NSMutableDictionary * soundIDs;
+
+@property (nonatomic,copy) presentView publishView;
 @end

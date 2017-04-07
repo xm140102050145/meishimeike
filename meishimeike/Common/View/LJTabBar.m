@@ -76,11 +76,10 @@
     vc.title = @"发布教程";
     LJBaseNavigationController *baseNavigation = [[LJBaseNavigationController alloc] initWithRootViewController:vc];
     baseNavigation.view.frame = LJwindow.bounds;
-    baseNavigation.view.lj_y = LJwindow.lj_height;
-    [UIView animateWithDuration:0.3 animations:^{
-        baseNavigation.view.lj_y = 0;
-        [LJwindow addSubview:baseNavigation.view];
-    }];
+    if (self.publishView) {
+        self.publishView(baseNavigation);
+    }
+    
 }
 
 - (void)tabBarButtonClick:(UIControl *)tabBarButton {
