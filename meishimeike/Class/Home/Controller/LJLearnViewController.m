@@ -21,6 +21,8 @@
 
 @property (nonatomic,strong) UILabel *stepLabel;
 @property (nonatomic,strong) UILabel *textContentLabel;
+
+@property (nonatomic,strong) UILabel *tipLabel;
 @end
 
 @implementation LJLearnViewController
@@ -130,6 +132,23 @@
         textLabel.numberOfLines = 20;
         [self.scrollViewbottom addSubview:textLabel];
     }
+    
+    /*** 底部提示信息 ***/
+    self.tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.scrollViewbottom.lj_bottom+40, SCREEN_WIDTH / 2, 20)];
+    self.tipLabel.lj_centerX = SCREEN_WIDTH / 2;
+    self.tipLabel.text = @"向右滑动，开始学习！";
+    self.tipLabel.textColor = LJFontColor39;
+    self.tipLabel.font = LJFontSize15;
+    self.tipLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.tipLabel];
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"transform.scale";
+    animation.values = @[@1,@1.2,@1.3,@0.9,@1.2,@0.95,@1];
+    animation.duration = 1;
+    animation.repeatCount = MAXFLOAT;
+    animation.calculationMode = kCAAnimationCubic;
+    [self.tipLabel.layer addAnimation:animation forKey:nil];
 }
 
 - (void)shareClick:(UIButton *)sender {
@@ -156,12 +175,26 @@
         point.x = index * 250;
         [self.scrollViewtop setContentOffset:point animated:YES];
         self.stepLabel.text = [NSString stringWithFormat:@"第%ld步",index + 1];
+        if (index > 0 &&index != self.dataArray.count - 1) {
+            self.tipLabel.text = @"左右滑动!";
+        }else if (index == self.dataArray.count - 1){
+            self.tipLabel.text = @"已到最后一步!";
+        }else {
+            self.tipLabel.text = @"向右滑动，继续学习！";
+        }
     }else {
         CGPoint point = self.scrollViewtop.contentOffset;
         NSInteger index = self.scrollViewtop.contentOffset.x / 250;
         point.x = index * SCREEN_WIDTH;
         [self.scrollViewbottom setContentOffset:point animated:YES];
         self.stepLabel.text = [NSString stringWithFormat:@"第%ld步",index + 1];
+        if (index > 0 &&index != self.dataArray.count - 1) {
+            self.tipLabel.text = @"左右滑动!";
+        }else if (index == self.dataArray.count - 1){
+            self.tipLabel.text = @"已到最后一步!";
+        }else {
+            self.tipLabel.text = @"向右滑动，继续学习！";
+        }
     }
 }
 

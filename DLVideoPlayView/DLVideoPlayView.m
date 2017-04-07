@@ -1,3 +1,4 @@
+
 //
 //  DLVideoPlayView.m
 //  DLVideoPlayView
@@ -22,7 +23,6 @@
     BOOL _isLock;    // 是否锁屏
     BOOL _isShowToolbar; // 是否显示工具条
     BOOL _isSliding; // 是否正在滑动
-    BOOL _isLoadResource; //是否已加载资源
 }
 /*** 基本属性 ***/
 // AVPlayer 控制视频播放
@@ -51,6 +51,16 @@
 @end
 
 @implementation DLVideoPlayView
+
+- (void)removeObserveAndNOtification {
+    [_player replaceCurrentItemWithPlayerItem:nil];
+    [_playerItem removeObserver:self forKeyPath:@"status"];
+    [_playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+    //    [_player removeTimeObserver:_playTimeObserver];
+    //    _playTimeObserver = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -192,6 +202,9 @@
         _bottomToolBarView.alpha = 1;
         _playButton.alpha = 1;
     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hiddenToolBar];
+    });
 }
 /*** 隐藏工具栏 ***/
 - (void)hiddenToolBar {
@@ -209,6 +222,9 @@
     _isPlaying = YES;
     [_player play];
     [_playButton setImage:[UIImage imageNamed:@"home_play_icon"] forState:UIControlStateNormal];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hiddenToolBar];
+    });
 }
 /*** 暂停 ***/
 - (void)pauseVideo {

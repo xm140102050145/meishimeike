@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="LJVideoDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-ag-wwG">
+                        <rect key="frame" x="10" y="20" width="40" height="61.5"/>
+                        <color key="backgroundColor" red="0.02110379574" green="0.5" blue="0.95619993079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="TsJ-iQ-V89"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大魔王" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXL-eR-OGt">
+                        <rect key="frame" x="60" y="15" width="164" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="j3D-dx-WBt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV1-AB-yne">
+                        <rect key="frame" x="249" y="10" width="120" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="MKG-Qu-26i"/>
+                            <constraint firstAttribute="height" constant="20" id="fUx-cj-tzy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="djfldksjakj;k j;alkdjf;lkjds;lakfj;alkesjlfjdslkjf;lksdjfl;kjsdlkfj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-79-i99">
+                        <rect key="frame" x="60" y="42" width="309" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="RlR-jq-R2R"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTL-YK-FxB">
+                        <rect key="frame" x="0.0" y="100.5" width="379" height="1"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="pM6-WM-vbn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="U47-79-i99" firstAttribute="top" secondItem="MXL-eR-OGt" secondAttribute="bottom" constant="6" id="8cy-wa-M5C"/>
+                    <constraint firstAttribute="bottom" secondItem="PTL-YK-FxB" secondAttribute="bottom" id="G22-ZO-rdA"/>
+                    <constraint firstItem="PTL-YK-FxB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GVI-w1-OlK"/>
+                    <constraint firstItem="U47-79-i99" firstAttribute="leading" secondItem="kHe-ag-wwG" secondAttribute="trailing" constant="10" id="HC3-DO-ZNp"/>
+                    <constraint firstAttribute="trailing" secondItem="PTL-YK-FxB" secondAttribute="trailing" id="IsY-bF-bII"/>
+                    <constraint firstItem="BV1-AB-yne" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KgT-Vi-5nH"/>
+                    <constraint firstItem="kHe-ag-wwG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="QBK-EB-bfY"/>
+                    <constraint firstItem="MXL-eR-OGt" firstAttribute="leading" secondItem="kHe-ag-wwG" secondAttribute="trailing" constant="10" id="QFT-A4-UDn"/>
+                    <constraint firstAttribute="trailing" secondItem="BV1-AB-yne" secondAttribute="trailing" constant="10" id="QQI-I9-g9x"/>
+                    <constraint firstItem="MXL-eR-OGt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Txt-MS-PVu"/>
+                    <constraint firstItem="kHe-ag-wwG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Vr8-ke-Esb"/>
+                    <constraint firstItem="BV1-AB-yne" firstAttribute="leading" secondItem="MXL-eR-OGt" secondAttribute="trailing" constant="25" id="dxO-dE-YUJ"/>
+                    <constraint firstAttribute="bottom" secondItem="kHe-ag-wwG" secondAttribute="bottom" constant="20" id="iD1-6W-Njp"/>
+                    <constraint firstAttribute="trailing" secondItem="U47-79-i99" secondAttribute="trailing" constant="10" id="qi4-2K-Ry8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentLabel" destination="U47-79-i99" id="sXR-Z8-F6g"/>
+                <outlet property="timeLabel" destination="BV1-AB-yne" id="eRV-fB-l5y"/>
+                <outlet property="userImageView" destination="kHe-ag-wwG" id="D3a-Xd-i5g"/>
+                <outlet property="userNameLabel" destination="MXL-eR-OGt" id="Tdx-iX-Jri"/>
+            </connections>
+            <point key="canvasLocation" x="-244" y="-71"/>
+        </tableViewCell>
+    </objects>
+</document>

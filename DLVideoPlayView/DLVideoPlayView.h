@@ -32,4 +32,7 @@ typedef void (^backframe)(UIView * view);// 返回当前播放的view
 @property (nonatomic,strong) NSURL *URLStr;
 #pragma mark -- 让持有者控制自己的frame
 @property (nonatomic,copy) backframe viewbackframe ;
+
+- (void)removeObserveAndNOtification;
+@property (nonatomic,assign) BOOL isLoadResource; //是否已加载资源
 @end

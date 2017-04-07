@@ -20,7 +20,7 @@
         self.inputTextField.lj_centerY = self.lj_height / 2;
         self.inputTextField.borderStyle = UITextBorderStyleRoundedRect;
         self.inputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        self.inputTextField.placeholder = @"这蔬菜....";
+        self.inputTextField.placeholder = @"发表一下感想吧....";
         [self addSubview:self.inputTextField];
         //表情按钮
         self.emoticonsBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.inputTextField.lj_right + spaceEdgeW( 6), 0, 20, 20)];

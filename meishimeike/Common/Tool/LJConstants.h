@@ -48,6 +48,10 @@ extern NSString *const Requrecate ;
 /*** 做菜页面数据获取  ***/
 extern NSString *const Requrededatil;
 extern NSString *const Videocate;
+/*** 获取视频页面里的评论 ***/
+extern NSString *const Rvideocomment;
+/*** 对某个食物视频进行评论 ***/
+extern NSString *const Commentvideo;
 /*** 收藏  ***/
 extern NSString *const Collect ;
 /*** 查询我的收藏  ***/

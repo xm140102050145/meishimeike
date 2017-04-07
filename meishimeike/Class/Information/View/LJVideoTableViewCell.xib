@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="LJVideoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="294" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-TP-UGJ">
+                        <rect key="frame" x="8" y="8" width="105" height="94.5"/>
+                        <color key="backgroundColor" red="0.43446100059999998" green="1" blue="0.95619993079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="105" id="YnC-cE-7Z1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDH-SX-sKl">
+                        <rect key="frame" x="118" y="15" width="166" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="E8t-5n-DVQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label干嘛非要上南路dskflkjhlkdjhfslajhdslkfjhdslajfhaldsjhflsajdhfldsjhfljsdhfshfiue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEx-rG-H47">
+                        <rect key="frame" x="118" y="42" width="166" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击查看视频" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-xR-K3d">
+                        <rect key="frame" x="148" y="81.5" width="88" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3tE-e8-62V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lEx-rG-H47" firstAttribute="top" secondItem="NDH-SX-sKl" secondAttribute="bottom" constant="2" id="0CB-lD-zQJ"/>
+                    <constraint firstItem="Ag2-TP-UGJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2nW-MH-EB4"/>
+                    <constraint firstItem="NDH-SX-sKl" firstAttribute="leading" secondItem="Ag2-TP-UGJ" secondAttribute="trailing" constant="5" id="6Re-In-tbu"/>
+                    <constraint firstAttribute="bottom" secondItem="2bT-xR-K3d" secondAttribute="bottom" constant="9" id="7k4-ag-wCd"/>
+                    <constraint firstAttribute="trailing" secondItem="2bT-xR-K3d" secondAttribute="trailing" constant="58" id="CSV-8h-qAQ"/>
+                    <constraint firstItem="NDH-SX-sKl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="GPX-Po-UVJ"/>
+                    <constraint firstItem="2bT-xR-K3d" firstAttribute="leading" secondItem="Ag2-TP-UGJ" secondAttribute="trailing" constant="35" id="cM1-xI-tc2"/>
+                    <constraint firstAttribute="trailing" secondItem="NDH-SX-sKl" secondAttribute="trailing" constant="10" id="hrj-ZI-JfD"/>
+                    <constraint firstAttribute="trailing" secondItem="lEx-rG-H47" secondAttribute="trailing" constant="10" id="kyB-vf-ivl"/>
+                    <constraint firstItem="lEx-rG-H47" firstAttribute="leading" secondItem="Ag2-TP-UGJ" secondAttribute="trailing" constant="5" id="lij-Y2-0j4"/>
+                    <constraint firstAttribute="bottom" secondItem="Ag2-TP-UGJ" secondAttribute="bottom" constant="8" id="pId-wj-csC"/>
+                    <constraint firstItem="Ag2-TP-UGJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xHI-9y-nte"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgImageView" destination="Ag2-TP-UGJ" id="j9s-Mg-H4B"/>
+                <outlet property="briefLabel" destination="lEx-rG-H47" id="xTx-oG-xV6"/>
+                <outlet property="titilLabel" destination="NDH-SX-sKl" id="xgh-X3-7gn"/>
+            </connections>
+            <point key="canvasLocation" x="110" y="-69"/>
+        </tableViewCell>
+    </objects>
+</document>

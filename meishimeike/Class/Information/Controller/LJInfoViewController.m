@@ -7,9 +7,10 @@
 //
 
 #import "LJInfoViewController.h"
-#import "LJNewsTableViewCell.h"
+#import "LJVideoTableViewCell.h"
 #import "LJNewsModel.h"
 #import "DLCycleBannerView.h"
+#import "LJVideoViewController.h"
 
 @interface LJInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -49,6 +50,7 @@
         _newsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, SCREEN_HEIGHT-249) style:UITableViewStylePlain];
         _newsTableView.delegate = self;
         _newsTableView.dataSource = self;
+        [_newsTableView registerNib:[UINib nibWithNibName:@"LJVideoTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJVideoTableViewCell"];
         [self.view addSubview:_newsTableView];
          _newsTableView.tableFooterView = [[UIView alloc] init];
     }
@@ -68,21 +70,20 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 170;
+    return 120;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LJNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
-    if (!cell) {
-        cell = [[LJNewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
-    }
-    cell.newsModel = self.newsArr[indexPath.row];
+    LJVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJVideoTableViewCell"];
+    cell.NewsModel = self.newsArr[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    LJVideoViewController *videoView =[[LJVideoViewController alloc] init];
+    videoView.NewsModel = self.newsArr[indexPath.row];
+    [self.navigationController pushViewController:videoView animated:YES];
 }
 
 - (void)dealloc

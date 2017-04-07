@@ -43,6 +43,10 @@ NSString *const Requrecate = @"http://192.168.3.17:8888/meishimeike/index.php/ho
 /*** 做菜页面数据获取  ***/
 NSString *const Requrededatil = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/requrededatil";
 NSString *const Videocate = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/videocate";
+/*** 获取视频页面里的评论 ***/
+NSString *const Rvideocomment = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/rvideocomment?cateid=";
+/*** 对某个食物视频进行评论 ***/
+NSString *const Commentvideo = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/commentvideo";
 /*** 收藏  ***/
 NSString *const Collect = @"http://192.168.3.17:8888/meishimeike/index.php/home/User/collect";
 /*** 查询我的收藏  ***/
