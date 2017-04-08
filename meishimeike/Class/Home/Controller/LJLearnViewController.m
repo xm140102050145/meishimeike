@@ -23,6 +23,7 @@
 @property (nonatomic,strong) UILabel *textContentLabel;
 
 @property (nonatomic,strong) UILabel *tipLabel;
+
 @end
 
 @implementation LJLearnViewController
@@ -150,6 +151,9 @@
     animation.calculationMode = kCAAnimationCubic;
     [self.tipLabel.layer addAnimation:animation forKey:nil];
 }
+
+
+
 
 - (void)shareClick:(UIButton *)sender {
     LJTooltip *tip = [[LJTooltip alloc] initWithToolTipStyle:ToolTipStyleAlert3];

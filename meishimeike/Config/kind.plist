@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>中餐</string>
+		<key>kind</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>西餐</string>
+		<key>kind</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>烘培</string>
+		<key>kind</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>果饮</string>
+		<key>kind</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>周营养</string>
+		<key>kind</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>养生食谱</string>
+		<key>kind</key>
+		<string>6</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>特色小吃</string>
+		<key>kind</key>
+		<string>7</string>
+	</dict>
+</array>
+</plist>

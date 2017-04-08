@@ -37,6 +37,8 @@
 		1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7451E4EE1BA00395821 /* LJBaseViewController.m */; };
 		1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */; };
 		1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7571E4F48FE00395821 /* LJTabBar.m */; };
+		1474E6861E98C2A800122645 /* kind.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1474E6851E98C2A800122645 /* kind.plist */; };
+		1474E6891E98C83300122645 /* LJNextPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1474E6881E98C83300122645 /* LJNextPublishViewController.m */; };
 		147C84041E7FF03F0056AA6F /* AFNetworkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 147C84011E7FF03F0056AA6F /* AFNetworkingAPI.m */; };
 		147C84051E7FF03F0056AA6F /* AFNetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 147C84031E7FF03F0056AA6F /* AFNetworkingClient.m */; };
 		147C84211E7FF8B60056AA6F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 147C84091E7FF8B60056AA6F /* LICENSE */; };
@@ -275,6 +277,9 @@
 		1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseNavigationController.m; sourceTree = "<group>"; };
 		1469A7561E4F48FE00395821 /* LJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBar.h; sourceTree = "<group>"; };
 		1469A7571E4F48FE00395821 /* LJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBar.m; sourceTree = "<group>"; };
+		1474E6851E98C2A800122645 /* kind.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kind.plist; sourceTree = "<group>"; };
+		1474E6871E98C83300122645 /* LJNextPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNextPublishViewController.h; sourceTree = "<group>"; };
+		1474E6881E98C83300122645 /* LJNextPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNextPublishViewController.m; sourceTree = "<group>"; };
 		147C84001E7FF03F0056AA6F /* AFNetworkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingAPI.h; sourceTree = "<group>"; };
 		147C84011E7FF03F0056AA6F /* AFNetworkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingAPI.m; sourceTree = "<group>"; };
 		147C84021E7FF03F0056AA6F /* AFNetworkingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingClient.h; sourceTree = "<group>"; };
@@ -775,6 +780,7 @@
 				14193B8E1E0A4C9F00B0F28D /* PrefixHeader.pch */,
 				14193B751E0A3CFF00B0F28D /* Info.plist */,
 				14193B761E0A3CFF00B0F28D /* main.m */,
+				1474E6851E98C2A800122645 /* kind.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1206,6 +1212,8 @@
 			children = (
 				14F400C51E8CD9AC00350596 /* LJPublishViewController.h */,
 				14F400C61E8CD9AC00350596 /* LJPublishViewController.m */,
+				1474E6871E98C83300122645 /* LJNextPublishViewController.h */,
+				1474E6881E98C83300122645 /* LJNextPublishViewController.m */,
 			);
 			path = publish;
 			sourceTree = "<group>";
@@ -1554,6 +1562,7 @@
 				147C84211E7FF8B60056AA6F /* LICENSE in Resources */,
 				14BC7F8D1E8137B80089B875 /* LJcateStartTableViewCell.xib in Resources */,
 				1482EA8A1E7AF333005D234E /* y2@2x.png in Resources */,
+				1474E6861E98C2A800122645 /* kind.plist in Resources */,
 				14BC7FA11E816F230089B875 /* zhe4@2x.png in Resources */,
 				1482EA8D1E7AF333005D234E /* y5@2x.png in Resources */,
 				14BC7F7E1E81248D0089B875 /* d2@2x.png in Resources */,
@@ -1794,6 +1803,7 @@
 				147C84551E7FF9800056AA6F /* SDWebImageDownloaderOperation.m in Sources */,
 				14F4014F1E8CDE6C00350596 /* LJGoodsModel.m in Sources */,
 				1469A7401E4EC59200395821 /* LJConstants.m in Sources */,
+				1474E6891E98C83300122645 /* LJNextPublishViewController.m in Sources */,
 				14F401451E8CDE6C00350596 /* LJOpinionViewController.m in Sources */,
 				14F401AC1E8CE04B00350596 /* TZPhotoPickerController.m in Sources */,
 				14F4013F1E8CDE6C00350596 /* LJModifyPwdViewController.m in Sources */,

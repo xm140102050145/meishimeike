@@ -32,4 +32,12 @@
  @param radii 半径
  */
 - (void)setCorneradi:(UIRectCorner)corner radii:(CGFloat)radii;
+
+/**
+ 创建下画线
+
+ @param y y坐标
+ @return 下画线
+ */
++ (UIView *)setLineViewAtY:(CGFloat)y;
 @end

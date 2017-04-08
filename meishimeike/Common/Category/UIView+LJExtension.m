@@ -138,4 +138,10 @@
     self.layer.mask = maskLayer;
 }
 
++ (UIView *)setLineViewAtY:(CGFloat)y {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, y, SCREEN_WIDTH, 0.5)];
+    view.backgroundColor = LJCutLineColor;
+    return view;
+}
+
 @end
