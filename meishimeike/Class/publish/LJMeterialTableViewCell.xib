@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="LJMeterialTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例:   蒜" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlq-HY-Fqf">
+                        <rect key="frame" x="0.0" y="0.0" width="204" height="80"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-zu-bQu">
+                        <rect key="frame" x="10" y="80" width="388" height="0.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="TuM-0V-a2k"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="瓣" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13H-k3-pLL">
+                        <rect key="frame" x="204" y="0.0" width="204" height="80"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Co-zu-bQu" firstAttribute="top" secondItem="Wlq-HY-Fqf" secondAttribute="bottom" id="4AA-kF-UhD"/>
+                    <constraint firstItem="1Co-zu-bQu" firstAttribute="top" secondItem="13H-k3-pLL" secondAttribute="bottom" id="4IH-M6-QS8"/>
+                    <constraint firstAttribute="bottom" secondItem="1Co-zu-bQu" secondAttribute="bottom" id="MQv-jr-AJd"/>
+                    <constraint firstItem="1Co-zu-bQu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="PWw-59-ZY8"/>
+                    <constraint firstItem="13H-k3-pLL" firstAttribute="leading" secondItem="Wlq-HY-Fqf" secondAttribute="trailing" id="R1G-X4-GJW"/>
+                    <constraint firstItem="Wlq-HY-Fqf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rgh-q3-sfN"/>
+                    <constraint firstAttribute="trailing" secondItem="1Co-zu-bQu" secondAttribute="trailing" constant="10" id="VR9-sQ-T3S"/>
+                    <constraint firstItem="Wlq-HY-Fqf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="b9G-r2-Qfb"/>
+                    <constraint firstItem="13H-k3-pLL" firstAttribute="width" secondItem="Wlq-HY-Fqf" secondAttribute="width" id="bLP-Av-1Ft"/>
+                    <constraint firstItem="13H-k3-pLL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lOa-zg-H4Q"/>
+                    <constraint firstAttribute="trailing" secondItem="13H-k3-pLL" secondAttribute="trailing" id="rn0-Xy-lIh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cateNameText" destination="Wlq-HY-Fqf" id="PRF-S0-Qeu"/>
+                <outlet property="dosageText" destination="13H-k3-pLL" id="XLt-Un-0da"/>
+            </connections>
+            <point key="canvasLocation" x="-252" y="-55"/>
+        </tableViewCell>
+    </objects>
+</document>

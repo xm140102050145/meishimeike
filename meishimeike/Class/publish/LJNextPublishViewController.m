@@ -8,6 +8,10 @@
 
 #import "LJNextPublishViewController.h"
 #import "NSString+Extension.h"
+
+#import "LJMeterialTableViewCell.h"
+#import "LJMakeStepTableViewCell.h"
+
 @interface LJNextPublishViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
     CGFloat _height;
     NSInteger rowNum1; //第一个section的行数
@@ -33,8 +37,12 @@
     self.tableView.lj_height = SCREEN_HEIGHT - 64;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"创建菜谱";
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"LJMeterialTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJMeterialTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LJMakeStepTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJMakeStepTableViewCell"];
     
     [self addObserver:self forKeyPath:@"h" options:NSKeyValueObservingOptionNew |NSKeyValueObservingOptionOld context:nil];
     
@@ -100,11 +108,28 @@
 
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        LJMeterialTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJMeterialTableViewCell"];
+        return cell;
+    }else if (indexPath.section == 1) {
+        LJMakeStepTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJMakeStepTableViewCell"];
+        return cell;
+    }
+    static NSString* cellId = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行",indexPath.row];
+    return cell;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return 50;
     }else if (indexPath.section == 1) {
-        return 150;
+        return 400;
     }else if (indexPath.section == 2) {
         return 40;
     }
@@ -286,7 +311,6 @@
           [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
        }
     }
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

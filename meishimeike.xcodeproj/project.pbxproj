@@ -32,6 +32,10 @@
 		14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B7A1E0A3CFF00B0F28D /* AppDelegate.m */; };
 		14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B851E0A417800B0F28D /* LJRootViewController.m */; };
 		14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */; };
+		1431AD821E9A146400A8F5A5 /* LJMeterialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1431AD801E9A146400A8F5A5 /* LJMeterialTableViewCell.m */; };
+		1431AD831E9A146400A8F5A5 /* LJMeterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431AD811E9A146400A8F5A5 /* LJMeterialTableViewCell.xib */; };
+		1431AD871E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1431AD851E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m */; };
+		1431AD881E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431AD861E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib */; };
 		1469A7401E4EC59200395821 /* LJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A73F1E4EC59200395821 /* LJConstants.m */; };
 		1469A7431E4ECE3600395821 /* LJMD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7421E4ECE3600395821 /* LJMD5Encrypt.m */; };
 		1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7451E4EE1BA00395821 /* LJBaseViewController.m */; };
@@ -267,6 +271,12 @@
 		14193B851E0A417800B0F28D /* LJRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRootViewController.m; sourceTree = "<group>"; };
 		14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14193B8E1E0A4C9F00B0F28D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1431AD7F1E9A146400A8F5A5 /* LJMeterialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMeterialTableViewCell.h; sourceTree = "<group>"; };
+		1431AD801E9A146400A8F5A5 /* LJMeterialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMeterialTableViewCell.m; sourceTree = "<group>"; };
+		1431AD811E9A146400A8F5A5 /* LJMeterialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMeterialTableViewCell.xib; sourceTree = "<group>"; };
+		1431AD841E9A18A100A8F5A5 /* LJMakeStepTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMakeStepTableViewCell.h; sourceTree = "<group>"; };
+		1431AD851E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMakeStepTableViewCell.m; sourceTree = "<group>"; };
+		1431AD861E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMakeStepTableViewCell.xib; sourceTree = "<group>"; };
 		1469A73E1E4EC59200395821 /* LJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConstants.h; sourceTree = "<group>"; };
 		1469A73F1E4EC59200395821 /* LJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJConstants.m; sourceTree = "<group>"; };
 		1469A7411E4ECE3600395821 /* LJMD5Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMD5Encrypt.h; sourceTree = "<group>"; };
@@ -1214,6 +1224,12 @@
 				14F400C61E8CD9AC00350596 /* LJPublishViewController.m */,
 				1474E6871E98C83300122645 /* LJNextPublishViewController.h */,
 				1474E6881E98C83300122645 /* LJNextPublishViewController.m */,
+				1431AD7F1E9A146400A8F5A5 /* LJMeterialTableViewCell.h */,
+				1431AD801E9A146400A8F5A5 /* LJMeterialTableViewCell.m */,
+				1431AD811E9A146400A8F5A5 /* LJMeterialTableViewCell.xib */,
+				1431AD841E9A18A100A8F5A5 /* LJMakeStepTableViewCell.h */,
+				1431AD851E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m */,
+				1431AD861E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib */,
 			);
 			path = publish;
 			sourceTree = "<group>";
@@ -1539,6 +1555,7 @@
 				14BC7F711E811E9C0089B875 /* z2@2x.png in Resources */,
 				14BC7FA91E81724B0089B875 /* lu4@2x.png in Resources */,
 				14BC7F7F1E81248D0089B875 /* d1@2x.png in Resources */,
+				1431AD881E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib in Resources */,
 				14BC7FA81E81724B0089B875 /* lu3@2x.png in Resources */,
 				14F401A41E8CE04B00350596 /* photo_delete@2x.png in Resources */,
 				147C84FC1E802EC10056AA6F /* LJWeDoCollectionViewCell.xib in Resources */,
@@ -1550,6 +1567,7 @@
 				14BC7F651E810F780089B875 /* LJZhongcanCollectionViewCell.xib in Resources */,
 				140935811E8919F20042A067 /* player_fullScreen_iphone@2x.png in Resources */,
 				1482EA8C1E7AF333005D234E /* y4@2x.png in Resources */,
+				1431AD831E9A146400A8F5A5 /* LJMeterialTableViewCell.xib in Resources */,
 				1493DF9A1E97B961008742DA /* star1.png in Resources */,
 				1493DF981E979C9E008742DA /* LJVideoDetailTableViewCell.xib in Resources */,
 				14BC7F781E8121840089B875 /* t1@2x.png in Resources */,
@@ -1774,6 +1792,7 @@
 				147C84AD1E800D830056AA6F /* LJVerifyInfo.m in Sources */,
 				147C84721E80005E0056AA6F /* NSData+DLExtension.m in Sources */,
 				147C84561E7FF9800056AA6F /* SDWebImageManager.m in Sources */,
+				1431AD821E9A146400A8F5A5 /* LJMeterialTableViewCell.m in Sources */,
 				147C842A1E7FF8B60056AA6F /* NSObject+MJProperty.m in Sources */,
 				1409356C1E88C2260042A067 /* LJLearnViewController.m in Sources */,
 				147C84F41E802EC10056AA6F /* LJHomeViewController.m in Sources */,
@@ -1814,6 +1833,7 @@
 				147C84541E7FF9800056AA6F /* SDWebImageDownloader.m in Sources */,
 				14F4015B1E8CDE6C00350596 /* LJNewsCenterTableViewCell.m in Sources */,
 				147C84B01E800DDF0056AA6F /* UIView+LJExtension.m in Sources */,
+				1431AD871E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m in Sources */,
 				147C84501E7FF9800056AA6F /* NSData+ImageContentType.m in Sources */,
 				147C84051E7FF03F0056AA6F /* AFNetworkingClient.m in Sources */,
 				147C84221E7FF8B60056AA6F /* MJExtensionConst.m in Sources */,

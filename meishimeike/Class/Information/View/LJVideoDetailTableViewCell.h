@@ -2,7 +2,7 @@
 //  LJVideoDetailTableViewCell.h
 //  meishimeike
 //
-//  Created by zhenglong duan on 07/04/2017.
+//  Created by zhenglong d/Users/zhenglongduan/Desktop/Meishimeke/meishimeike/meishimeike/Class/publish/LJMeterialTableViewCell.huan on 07/04/2017.
 //  Copyright © 2017 zhenglong duan. All rights reserved.
 //
 
