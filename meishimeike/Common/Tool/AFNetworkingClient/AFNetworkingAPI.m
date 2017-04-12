@@ -30,7 +30,7 @@
         if ([data isKindOfClass:[NSDictionary class]]) {
             NSDictionary *dic = data;
             if ([dic[@"code"] intValue] == 200) {
-                NSArray *arr = dic[@"result"];
+                id arr = dic[@"result"];
                 requireDataBlock(arr);  //只考虑获取成功后的数据
             }else {
                 requireDataBlock(dic[@"message"]);
@@ -39,4 +39,18 @@
     }];
 }
 
+/*** 上传图片文件:通过data形式 ***/
++ (void)uploadImagesWithPath:(NSString *)path Params:(nullable NSDictionary *)params imagesArray:(NSArray *)imagesArray requrieDataBack:(DlRequireDataBlock)requireDataBlock {
+    [AFNetworkingClient uploadImagesWithPath:path Params:params imagesArray:imagesArray requrieDataBack:^(id  _Nonnull data) {
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dic = data;
+            if ([dic[@"code"] intValue] == 200) {
+                id arr = dic[@"result"];
+                requireDataBlock(arr);  //只考虑获取成功后的数据
+            }else {
+                requireDataBlock(dic[@"message"]);
+            }
+        }
+    }];
+}
 @end

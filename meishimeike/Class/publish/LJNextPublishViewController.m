@@ -32,6 +32,7 @@
 
 /*** 用料数组 ***/
 @property (nonatomic,strong) NSMutableArray *meterialArray;
+@property (nonatomic,strong) NSMutableArray *meterialArray1;
 /*** 步骤数组 ***/
 @property (nonatomic,strong) NSMutableArray *stepArray;
 
@@ -45,6 +46,7 @@
     
     self.meterialArray = [NSMutableArray array];
     self.stepArray = [NSMutableArray array];
+    self.meterialArray1 = [NSMutableArray array];
     
     self.tableView.lj_height = SCREEN_HEIGHT - 64;
     self.tableView.delegate = self;
@@ -134,7 +136,40 @@
 
 #pragma mark --上传菜谱
 - (void)upLoad {
+    NSMutableString *dosageStr = [NSMutableString string];
+    for (int i = 0; i < self.meterialArray1.count; i++) {
+        NSDictionary *dic = self.meterialArray1[i];
+        NSString *str = [NSString stringWithFormat:@"%@=%@",dic[@"cateName"],dic[@"dosage"]];
+        if (i == self.meterialArray1.count - 1) {
+            [dosageStr stringByAppendingString:[NSString stringWithFormat:@"%@",str]];
+        }else {
+           [dosageStr stringByAppendingString:[NSString stringWithFormat:@"%@/",str]];
+        }
+    }
     
+//    [self.stepArray removeAllObjects];
+    NSMutableString *conentStr = [NSMutableString string];
+    for (int i = 0; i < rowNum1; i++) {
+        LJMakeStepTableViewCell *cell = [self.tableView  cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]];
+        NSString *str = [NSString stringWithFormat:@"%d.%@",i,cell.stepConent.text];
+        if (i == rowNum1 - 1) {
+            [conentStr stringByAppendingString:[NSString stringWithFormat:@"%@",str]];
+        }else {
+            [conentStr stringByAppendingString:[NSString stringWithFormat:@"%@/",str]];
+        }
+//        [self.stepArray addObject:cell.stepImageView.image];
+    }
+    
+//    [self upConent:dosageStr dosage:conentStr imageArray:self.stepArray];
+    NSLog(@"dosageStr:---%@,conentStr:--%@,stepArray:--%@",dosageStr,conentStr,self.stepArray);
+}
+
+#pragma mark --开始上传
+- (void)upConent:(NSMutableString *)conentStr dosage:(NSMutableString *)dosageStr imageArray:(NSArray *)imageArray {
+    NSDictionary *dic = @{@"name":self.cateName,@"brief":self.textView.text,@"taste":@"甜",@"time":@"30min",@"crowd":@"皆宜",@"pay":@"煮",@"kind":self.cateKind,@"classify":@"2",@"material":dosageStr,@"tapy":@"1",@"stepconent":conentStr,@"userid":@"1"};
+    [AFNetworkingAPI uploadImagesWithPath:Publishcate Params:dic imagesArray:imageArray requrieDataBack:^(id  _Nonnull data) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 
@@ -146,6 +181,7 @@
             NSDictionary *dic = self.meterialArray[indexPath.row];
             cell.cateNameText.text = dic[@"cateName"];
             cell.dosageText.text = dic[@"dosage"];
+            [self.meterialArray1 addObject:dic];
         }
         return cell;
     }else if (indexPath.section == 1) {
@@ -276,6 +312,7 @@
             [self.meterialArray addObject:dic];
         }
         rowNum1 ++;
+        [self.meterialArray1 removeAllObjects];
         indexSet = [NSIndexSet indexSetWithIndex:0];
     }else if (sender.tag == 1001){
         rowNum2 ++;
@@ -421,7 +458,7 @@
     if (image==nil) {
         image=[info objectForKey:UIImagePickerControllerOriginalImage];
     }
-    if (_tag == 12) {
+    if(_tag == 12) {
         LJMakeStepTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_cell inSection:1]];
         cell.stepImageView.image = image;
     }else if(_tag == 10) {

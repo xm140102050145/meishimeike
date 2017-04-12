@@ -30,5 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param requireDataBlock 回调请求成功后的数据
  */
 + (void)getWithPath:(NSString *)path Params:(nullable NSDictionary *)params requrieDataBack:(DlRequireDataBlock)requireDataBlock;
+
+/*** 上传图片文件:通过data形式 ***/
++ (void)uploadImagesWithPath:(NSString *)path Params:(nullable NSDictionary *)params imagesArray:(NSArray *)imagesArray requrieDataBack:(DlRequireDataBlock)requireDataBlock;
+
 NS_ASSUME_NONNULL_END
 @end
