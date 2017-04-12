@@ -11,6 +11,7 @@
 
 #import "LJMeterialTableViewCell.h"
 #import "LJMakeStepTableViewCell.h"
+#import "LJTasteTableViewCell.h"
 
 @interface LJNextPublishViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
     CGFloat _height;
@@ -18,6 +19,9 @@
     NSInteger rowNum2; //第二个section的行数
     NSInteger rowNum3; //第三个section的行数
     NSInteger sectionNum; //
+    
+    NSInteger _cell;
+    NSInteger _tag;
 }
 @property (nonatomic,strong) UITextView *textView;
 @property (nonatomic,strong) UILabel *placeholder;
@@ -26,6 +30,11 @@
 
 @property (nonatomic,strong) UIImageView *imageView;
 
+/*** 用料数组 ***/
+@property (nonatomic,strong) NSMutableArray *meterialArray;
+/*** 步骤数组 ***/
+@property (nonatomic,strong) NSMutableArray *stepArray;
+
 @end
 
 @implementation LJNextPublishViewController
@@ -33,6 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     rowNum1 = rowNum2 = rowNum3 = 1;
+    
+    self.meterialArray = [NSMutableArray array];
+    self.stepArray = [NSMutableArray array];
     
     self.tableView.lj_height = SCREEN_HEIGHT - 64;
     self.tableView.delegate = self;
@@ -43,12 +55,14 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"LJMeterialTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJMeterialTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"LJMakeStepTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJMakeStepTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LJTasteTableViewCell" bundle:nil] forCellReuseIdentifier:@"LJTasteTableViewCell"];
     
     [self addObserver:self forKeyPath:@"h" options:NSKeyValueObservingOptionNew |NSKeyValueObservingOptionOld context:nil];
     
     _height =  SCREEN_HEIGHT * 4 /5 - 60;
     
     [self creatHeader];
+    [self creatFootView];
 }
 
 
@@ -71,7 +85,7 @@
     label.textAlignment = NSTextAlignmentCenter;
     [imageView addSubview:label];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapp)];
     [imageView addGestureRecognizer:tap];
     imageView.userInteractionEnabled = YES;
     
@@ -106,23 +120,48 @@
     [textView addSubview:self.placeholder];
 }
 
+#pragma mark --创建尾表单
+- (void)creatFootView {
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    [btn.titleLabel setFont: LJFontSize14];
+    btn.backgroundColor = LJTheMeColor;
+    [btn.titleLabel setTextColor:[UIColor whiteColor]];
+    [btn setTitle:@"上传菜谱" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(upLoad) forControlEvents:UIControlEventTouchUpInside];
+    self.tableView.tableFooterView = btn;
+}
+
+
+#pragma mark --上传菜谱
+- (void)upLoad {
+    
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         LJMeterialTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJMeterialTableViewCell"];
+        if (self.meterialArray.count > 0&&indexPath.row - self.meterialArray.count != 0) {
+            NSDictionary *dic = self.meterialArray[indexPath.row];
+            cell.cateNameText.text = dic[@"cateName"];
+            cell.dosageText.text = dic[@"dosage"];
+        }
         return cell;
     }else if (indexPath.section == 1) {
         LJMakeStepTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJMakeStepTableViewCell"];
+        cell.cell = indexPath.row;
+        __weak typeof(self)WeakSelf = self;
+        cell.stepIView = ^(NSInteger step, NSInteger tag) {
+            _cell = step;
+            _tag = tag;
+            [WeakSelf tap];
+        };
+        return cell;
+    }else {
+        LJTasteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJTasteTableViewCell"];
         return cell;
     }
-    static NSString* cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行",indexPath.row];
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -175,6 +214,8 @@
         [button addTarget:self action:@selector(batchUpdate) forControlEvents:UIControlEventTouchUpInside];
         return headerView;
     }else if (section == 2) {
+        tipLabel.font = LJFontSize14;
+        tipLabel.text = @"美食口味";
         return headerView;
     }
     return headerView;
@@ -210,10 +251,10 @@
         [button1 setTitle:@"调整步骤" forState:UIControlStateNormal];
         button1.tag = button.tag = 1001;
         return headerView;
-    }else if (section == 2) {
+    }else {
+        headerView.lj_height = 0;
         return headerView;
     }
-    return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -228,6 +269,12 @@
 - (void)addBtn:(UIButton *)sender {
     NSIndexSet *indexSet = [[NSIndexSet alloc] init];
     if (sender.tag == 1000) {
+        [self.meterialArray removeAllObjects];
+        for (int i = 0; i < rowNum1; i++) {
+            LJMeterialTableViewCell *cell = [self.tableView  cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            NSDictionary *dic = @{@"cateName":cell.cateNameText.text,@"dosage":cell.dosageText.text};
+            [self.meterialArray addObject:dic];
+        }
         rowNum1 ++;
         indexSet = [NSIndexSet indexSetWithIndex:0];
     }else if (sender.tag == 1001){
@@ -304,6 +351,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
        if (indexPath.section == sectionNum) {
            if (sectionNum == 0) {
+               if (self.meterialArray.count > 0&&indexPath.row - self.meterialArray.count != 0) {
+                   [self.meterialArray removeObjectAtIndex:indexPath.row];
+               }
                rowNum1--;
            }else if (sectionNum == 1) {
                rowNum2--;
@@ -329,8 +379,13 @@
     }
 }
 
-
 #pragma mark --封面手势
+- (void)tapp {
+    _tag = 10;
+    [self tap];
+}
+
+
 - (void)tap {
     UIAlertController *alert=[UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *button1=[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -366,7 +421,12 @@
     if (image==nil) {
         image=[info objectForKey:UIImagePickerControllerOriginalImage];
     }
-    self.imageView.image = image;
+    if (_tag == 12) {
+        LJMakeStepTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_cell inSection:1]];
+        cell.stepImageView.image = image;
+    }else if(_tag == 10) {
+        self.imageView.image = image;
+    }
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 

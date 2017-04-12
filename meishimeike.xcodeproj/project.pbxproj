@@ -41,6 +41,8 @@
 		1469A7461E4EE1BA00395821 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7451E4EE1BA00395821 /* LJBaseViewController.m */; };
 		1469A7551E4EE2C000395821 /* LJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */; };
 		1469A7581E4F48FE00395821 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469A7571E4F48FE00395821 /* LJTabBar.m */; };
+		146A08E71E9E326F00F992DE /* LJTasteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 146A08E51E9E326F00F992DE /* LJTasteTableViewCell.m */; };
+		146A08E81E9E326F00F992DE /* LJTasteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146A08E61E9E326F00F992DE /* LJTasteTableViewCell.xib */; };
 		1474E6861E98C2A800122645 /* kind.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1474E6851E98C2A800122645 /* kind.plist */; };
 		1474E6891E98C83300122645 /* LJNextPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1474E6881E98C83300122645 /* LJNextPublishViewController.m */; };
 		147C84041E7FF03F0056AA6F /* AFNetworkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 147C84011E7FF03F0056AA6F /* AFNetworkingAPI.m */; };
@@ -287,6 +289,9 @@
 		1469A7541E4EE2C000395821 /* LJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseNavigationController.m; sourceTree = "<group>"; };
 		1469A7561E4F48FE00395821 /* LJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBar.h; sourceTree = "<group>"; };
 		1469A7571E4F48FE00395821 /* LJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBar.m; sourceTree = "<group>"; };
+		146A08E41E9E326F00F992DE /* LJTasteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTasteTableViewCell.h; sourceTree = "<group>"; };
+		146A08E51E9E326F00F992DE /* LJTasteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTasteTableViewCell.m; sourceTree = "<group>"; };
+		146A08E61E9E326F00F992DE /* LJTasteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJTasteTableViewCell.xib; sourceTree = "<group>"; };
 		1474E6851E98C2A800122645 /* kind.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kind.plist; sourceTree = "<group>"; };
 		1474E6871E98C83300122645 /* LJNextPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNextPublishViewController.h; sourceTree = "<group>"; };
 		1474E6881E98C83300122645 /* LJNextPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNextPublishViewController.m; sourceTree = "<group>"; };
@@ -1230,6 +1235,9 @@
 				1431AD841E9A18A100A8F5A5 /* LJMakeStepTableViewCell.h */,
 				1431AD851E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m */,
 				1431AD861E9A18A100A8F5A5 /* LJMakeStepTableViewCell.xib */,
+				146A08E41E9E326F00F992DE /* LJTasteTableViewCell.h */,
+				146A08E51E9E326F00F992DE /* LJTasteTableViewCell.m */,
+				146A08E61E9E326F00F992DE /* LJTasteTableViewCell.xib */,
 			);
 			path = publish;
 			sourceTree = "<group>";
@@ -1597,6 +1605,7 @@
 				147C84F91E802EC10056AA6F /* LJMenuItemCollectionViewCell.xib in Resources */,
 				14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */,
 				140935821E8919F20042A067 /* player_fullScreen_iphone@3x.png in Resources */,
+				146A08E81E9E326F00F992DE /* LJTasteTableViewCell.xib in Resources */,
 				14BC7FA61E81724B0089B875 /* lu1@2x.png in Resources */,
 				140935801E8919F20042A067 /* icmpv_thumb_light@2x.png in Resources */,
 				14BC7F721E811E9C0089B875 /* z3@2x.png in Resources */,
@@ -1837,6 +1846,7 @@
 				147C84501E7FF9800056AA6F /* NSData+ImageContentType.m in Sources */,
 				147C84051E7FF03F0056AA6F /* AFNetworkingClient.m in Sources */,
 				147C84221E7FF8B60056AA6F /* MJExtensionConst.m in Sources */,
+				146A08E71E9E326F00F992DE /* LJTasteTableViewCell.m in Sources */,
 				147C842B1E7FF8B60056AA6F /* NSString+MJExtension.m in Sources */,
 				147C850A1E802F940056AA6F /* LJzhongcanViewController.m in Sources */,
 				1493DF971E979C9E008742DA /* LJVideoDetailTableViewCell.m in Sources */,
