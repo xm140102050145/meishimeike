@@ -62,7 +62,7 @@
 }
 
 #pragma mark--更换TabBar
-- (void)setUpTabBar {
+- (void)setUpTabBar {//
     LJTabBar *tabbar = [[LJTabBar alloc] init];
     [self setValue:tabbar forKey:@"tabBar"];
     self.selectedIndex = 0;
