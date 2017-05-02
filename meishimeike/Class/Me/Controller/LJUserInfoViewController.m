@@ -10,7 +10,7 @@
 #import "LJUserHeaderTableViewCell.h"
 #import "LJTooltip.h"
 #import "LJModifyPhoneNumViewController.h"
-@interface LJUserInfoViewController ()
+@interface LJUserInfoViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 /*** 头像 ***/
 @property (nonatomic,strong) UIImageView *headerImageView;
 /*** 昵称 ***/
@@ -54,6 +54,8 @@ static NSString *const LJUserHeaderTableViewCellId = @"LJUserHeaderTableViewCell
     if (indexPath.row ==0) {
         LJUserHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LJUserHeaderTableViewCellId];
         cell.selectionStyle = UITableViewCellSelectionStyleNone; //不让点击
+        NSString *url = [NSString stringWithFormat:@"%@%@",headerUrl,USERDEFINE.currentUser.user_headimage];
+        [cell.ImageView sd_setImageWithURL:[NSURL URLWithString:url]];
         cell.imageViewblock = ^(){
             LJTooltip *tip = [[LJTooltip alloc] initWithToolTipStyle:ToolTipStyleHeader];
             [tip showTooltip];
@@ -106,11 +108,15 @@ static NSString *const LJUserHeaderTableViewCellId = @"LJUserHeaderTableViewCell
         LJTooltip *tip = [[LJTooltip alloc] initWithToolTipStyle:ToolTipStyleHeader];
         [tip showTooltip];
         tip.okClickBlock =^(NSString *str) {
+            UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
+            PickerImage.allowsEditing = YES;
+            PickerImage.delegate = self;
             if([str isEqualToString:@"相机"]){   //调用相机
-                LJLog(@"相机");
+                 PickerImage.sourceType = UIImagePickerControllerSourceTypeCamera;
             }else if ([str isEqualToString:@"图库"]){  //调用图库
-                LJLog(@"图库");
+                 PickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             }
+            [self presentViewController:PickerImage animated:YES completion:nil];
         };
     }else if (indexPath.row ==1){
         LJTooltip *tip = [[LJTooltip alloc] initWithToolTipStyle:ToolTipStyleName];
@@ -148,6 +154,26 @@ static NSString *const LJUserHeaderTableViewCellId = @"LJUserHeaderTableViewCell
             //在这将更换的信息上传到数据库中  ---->
         };
     }
+}
+
+#pragma mark-imagepicker代理
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (image == nil) {
+        image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    }
+    LJUserHeaderTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    cell.ImageView.image = image;
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+    [AFNetworkingClient uploadImagesWithPath:Updateheaderimg Params:@{@"userid":USERDEFINE.currentUser.user_id} imagesArray:@[image] requrieDataBack:^(id  _Nonnull data) {
+        
+    }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

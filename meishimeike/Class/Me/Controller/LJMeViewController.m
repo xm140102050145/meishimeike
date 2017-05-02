@@ -287,6 +287,9 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
         self.userNameLabel.text = USERDEFINE.currentUser.user_name;
         NSString *url = [NSString stringWithFormat:@"%@%@",headerUrl,USERDEFINE.currentUser.user_headimage];
         [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:url]];
+    }else {
+        self.userNameLabel.text = @"点击头像登陆";
+        self.headerImageView.image = nil;
     }
 }
 @end

@@ -8,5 +8,5 @@
 
 #import "LJBaseTableViewCell.h"
 @interface LJUserHeaderTableViewCell : LJBaseTableViewCell
-
+@property (nonatomic,strong) UIImageView *ImageView;
 @end

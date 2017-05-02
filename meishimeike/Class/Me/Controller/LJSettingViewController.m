@@ -45,6 +45,8 @@
     if ([Manager fileExistsAtPath:path]) {
         [Manager removeItemAtPath:path error:nil];
     }
+    USERDEFINE.currentUser = nil;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark --代理方法

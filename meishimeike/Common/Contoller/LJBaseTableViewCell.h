@@ -13,7 +13,6 @@ typedef void (^imageViewBlock)();
 @interface LJBaseTableViewCell : UITableViewCell
 
 @property (nonatomic,strong) UILabel *TextLabel;
-@property (nonatomic,strong) UIImageView *ImageView;
 
 @property (nonatomic,copy) imageViewBlock imageViewblock;
 
