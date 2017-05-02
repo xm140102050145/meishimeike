@@ -27,7 +27,7 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[LJMyCollectDetailTableViewCell class] forCellReuseIdentifier:@"LJMyCollectDetailTableViewCell"];
     [self.view addSubview:self.tableView];
-    NSDictionary *dic = @{@"userid":@"1"};//USERDEFINE.currentUser.user_id
+    NSDictionary *dic = @{@"userid":USERDEFINE.currentUser.user_id};//USERDEFINE.currentUser.user_id
     [AFNetworkingAPI getWithPath:Mycollect Params:dic requrieDataBack:^(id  _Nonnull data) {
         self.dataArray = data;
         [self.tableView reloadData];

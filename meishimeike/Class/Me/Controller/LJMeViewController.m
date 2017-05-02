@@ -268,10 +268,10 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
             UIViewController *Vc = [NSClassFromString(@"LJMyCollectDetailViewController") new];
             [self.navigationController pushViewController:Vc animated:YES];
         }else if (indexPath.row == 1){  //教程
-            UIViewController *Vc = [NSClassFromString(@"LJOnlineServiceViewController") new];
+            UIViewController *Vc = [NSClassFromString(@"LJMyCollectDetailViewController") new];
             [self.navigationController pushViewController:Vc animated:YES];
         }else if (indexPath.row == 2){  //关注
-            UIViewController *Vc = [NSClassFromString(@"LJCheckUpdateViewController") new];  //关于我们
+            UIViewController *Vc = [NSClassFromString(@"LJMyCollectDetailViewController") new];  //关于我们
             [self.navigationController pushViewController:Vc animated:YES];
         }
     }
