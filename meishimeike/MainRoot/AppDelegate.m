@@ -20,7 +20,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[LJRootViewController alloc] init];
     [self.window makeKeyAndVisible];
+    [self AchieveUserInfo];
     return YES;
+}
+
+#pragma mark-获取已登陆用户信息
+-(void)AchieveUserInfo{
+    //读取沙盒路径
+    NSString* path=[NSString stringWithFormat:@"%@/Documents/user.plist",NSHomeDirectory()];
+    /*创建一个文件管理器(FileManager)*/
+    NSFileManager *Manager=[NSFileManager defaultManager];
+    if ([Manager fileExistsAtPath:path]) {
+        id data =[NSDictionary dictionaryWithContentsOfFile:path];
+        USERDEFINE.currentUser = [LJUserModel mj_objectWithKeyValues:data];
+    }
 }
 
 

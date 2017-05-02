@@ -28,8 +28,9 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"我的";
     [self setLayoutHeaderImageView];
-    [self setNavigationStatus];
+    [self publicComment];
 }
 
 #pragma mark --懒加载
@@ -114,28 +115,10 @@ static NSString *const LJOrderStatusCellID = @"LJOrderStatusCell";
     }];
 }
 
-#pragma mark --导航栏设置 
-- (void)setNavigationStatus {
-    self.navigationItem.title = @"我的";
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
-//    view.backgroundColor = [UIColor whiteColor];
-//    [self.view addSubview:view];
-    /*** 左边消息图标 ***/
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame= CGRectMake(0, 13, 50, 50);
-    button.tag =1111;
-    [button setImage:[UIImage imageNamed:@"tabbar_news_icon"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(messageBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    self.messageBtn =button;
-    [self.view addSubview:button];
-  
-    /*** 右边设置图标 ***/
-    UIButton *button1 = [[UIButton alloc] init];
-    button1.frame= CGRectMake(0, 15, 50, 50);
-    button1.lj_right =self.view.lj_right+5 ;
-    [button1 setImage:[UIImage imageNamed:@"tabbar_set_icon"] forState:UIControlStateNormal];
-    [button1 addTarget:self action:@selector(settingBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button1];
+#pragma mark --发表
+- (void)publicComment {
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithImage:@"设置" highImage:nil target:self action:@selector(settingBtnClick)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem initWithImage:@"消息" highImage:nil target:self action:@selector(messageBtnClick)];
 }
 
 #pragma mark --消息触发

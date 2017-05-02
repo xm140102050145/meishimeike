@@ -55,6 +55,9 @@
              NSDictionary *dic = @{@"telephone":self.phoneNum,@"password":self.secondTextField.text};
             [AFNetworkingAPI postWithPath:Register Params:dic requrieDataBack:^(id  _Nonnull data) {
                 USERDEFINE.currentUser = [LJUserModel mj_objectWithKeyValues:data];
+                /*再将当前用户信息储存到沙盒中*/
+                NSString *path=[NSString stringWithFormat:@"%@/Documents/user.plist",NSHomeDirectory()];
+                [data writeToFile:path atomically:YES];
             }];
          [self.navigationController popToRootViewControllerAnimated:YES];
         }

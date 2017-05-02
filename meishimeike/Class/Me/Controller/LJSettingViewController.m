@@ -38,7 +38,13 @@
 
 #pragma mark --退出触发
 - (void)ExitCurrentUser {
-    LJLogFunc
+    //读取沙盒路径
+    NSString* path=[NSString stringWithFormat:@"%@/Documents/user.plist",NSHomeDirectory()];
+    /*创建一个文件管理器(FileManager)*/
+    NSFileManager *Manager=[NSFileManager defaultManager];
+    if ([Manager fileExistsAtPath:path]) {
+        [Manager removeItemAtPath:path error:nil];
+    }
 }
 
 #pragma mark --代理方法
