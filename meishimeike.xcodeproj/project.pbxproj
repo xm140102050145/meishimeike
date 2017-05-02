@@ -32,6 +32,10 @@
 		14193B811E0A3CFF00B0F28D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B7A1E0A3CFF00B0F28D /* AppDelegate.m */; };
 		14193B861E0A417800B0F28D /* LJRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14193B851E0A417800B0F28D /* LJRootViewController.m */; };
 		14193B8D1E0A4A9500B0F28D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */; };
+		1423A64C1EB82E9F00CE8B05 /* LJXicanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1423A64B1EB82E9F00CE8B05 /* LJXicanViewController.m */; };
+		1423A6501EB82ED400CE8B05 /* LJhongpeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1423A64F1EB82ED400CE8B05 /* LJhongpeiViewController.m */; };
+		1423A6541EB82EF400CE8B05 /* LJguoyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1423A6531EB82EF400CE8B05 /* LJguoyinViewController.m */; };
+		1423A6571EB8601700CE8B05 /* LJPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1423A6561EB8601700CE8B05 /* LJPublicViewController.m */; };
 		1431AD821E9A146400A8F5A5 /* LJMeterialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1431AD801E9A146400A8F5A5 /* LJMeterialTableViewCell.m */; };
 		1431AD831E9A146400A8F5A5 /* LJMeterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431AD811E9A146400A8F5A5 /* LJMeterialTableViewCell.xib */; };
 		1431AD871E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1431AD851E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m */; };
@@ -273,6 +277,14 @@
 		14193B851E0A417800B0F28D /* LJRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRootViewController.m; sourceTree = "<group>"; };
 		14193B8C1E0A4A9500B0F28D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		14193B8E1E0A4C9F00B0F28D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1423A64A1EB82E9F00CE8B05 /* LJXicanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJXicanViewController.h; sourceTree = "<group>"; };
+		1423A64B1EB82E9F00CE8B05 /* LJXicanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJXicanViewController.m; sourceTree = "<group>"; };
+		1423A64E1EB82ED400CE8B05 /* LJhongpeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJhongpeiViewController.h; sourceTree = "<group>"; };
+		1423A64F1EB82ED400CE8B05 /* LJhongpeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJhongpeiViewController.m; sourceTree = "<group>"; };
+		1423A6521EB82EF400CE8B05 /* LJguoyinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJguoyinViewController.h; sourceTree = "<group>"; };
+		1423A6531EB82EF400CE8B05 /* LJguoyinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJguoyinViewController.m; sourceTree = "<group>"; };
+		1423A6551EB8601700CE8B05 /* LJPublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPublicViewController.h; sourceTree = "<group>"; };
+		1423A6561EB8601700CE8B05 /* LJPublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPublicViewController.m; sourceTree = "<group>"; };
 		1431AD7F1E9A146400A8F5A5 /* LJMeterialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMeterialTableViewCell.h; sourceTree = "<group>"; };
 		1431AD801E9A146400A8F5A5 /* LJMeterialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMeterialTableViewCell.m; sourceTree = "<group>"; };
 		1431AD811E9A146400A8F5A5 /* LJMeterialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMeterialTableViewCell.xib; sourceTree = "<group>"; };
@@ -834,6 +846,33 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		1423A6491EB82E7500CE8B05 /* xican */ = {
+			isa = PBXGroup;
+			children = (
+				1423A64A1EB82E9F00CE8B05 /* LJXicanViewController.h */,
+				1423A64B1EB82E9F00CE8B05 /* LJXicanViewController.m */,
+			);
+			name = xican;
+			sourceTree = "<group>";
+		};
+		1423A64D1EB82EB700CE8B05 /* hongpei */ = {
+			isa = PBXGroup;
+			children = (
+				1423A64E1EB82ED400CE8B05 /* LJhongpeiViewController.h */,
+				1423A64F1EB82ED400CE8B05 /* LJhongpeiViewController.m */,
+			);
+			name = hongpei;
+			sourceTree = "<group>";
+		};
+		1423A6511EB82EDF00CE8B05 /* guoyin */ = {
+			isa = PBXGroup;
+			children = (
+				1423A6521EB82EF400CE8B05 /* LJguoyinViewController.h */,
+				1423A6531EB82EF400CE8B05 /* LJguoyinViewController.m */,
+			);
+			name = guoyin;
+			sourceTree = "<group>";
+		};
 		147C83FF1E7FF03F0056AA6F /* AFNetworkingClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +1003,8 @@
 			children = (
 				147C84BA1E802EC10056AA6F /* LJFoodCircleViewController.h */,
 				147C84BB1E802EC10056AA6F /* LJFoodCircleViewController.m */,
+				1423A6551EB8601700CE8B05 /* LJPublicViewController.h */,
+				1423A6561EB8601700CE8B05 /* LJPublicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1003,6 +1044,9 @@
 		147C84BF1E802EC10056AA6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1423A6511EB82EDF00CE8B05 /* guoyin */,
+				1423A64D1EB82EB700CE8B05 /* hongpei */,
+				1423A6491EB82E7500CE8B05 /* xican */,
 				140935691E88C1C80042A067 /* learnCate */,
 				14BC7F801E8126970089B875 /* cateDetail */,
 				147C85111E8032380056AA6F /* zhongcan */,
@@ -1787,6 +1831,7 @@
 				14BC7F641E810F780089B875 /* LJZhongcanCollectionViewCell.m in Sources */,
 				1493DF8C1E97812B008742DA /* LJVideoTableViewCell.m in Sources */,
 				147C84F81E802EC10056AA6F /* LJMenuItemCollectionViewCell.m in Sources */,
+				1423A64C1EB82E9F00CE8B05 /* LJXicanViewController.m in Sources */,
 				14F401A81E8CE04B00350596 /* TZImageCropManager.m in Sources */,
 				14F4015D1E8CDE6C00350596 /* LJOrderBaseDetailStatusTableViewCell.m in Sources */,
 				147C84B61E8024BA0056AA6F /* LJUserModel.m in Sources */,
@@ -1840,6 +1885,7 @@
 				14F401A11E8CE04B00350596 /* DLImagePickerController.m in Sources */,
 				147C84581E7FF9800056AA6F /* UIButton+WebCache.m in Sources */,
 				147C84541E7FF9800056AA6F /* SDWebImageDownloader.m in Sources */,
+				1423A6501EB82ED400CE8B05 /* LJhongpeiViewController.m in Sources */,
 				14F4015B1E8CDE6C00350596 /* LJNewsCenterTableViewCell.m in Sources */,
 				147C84B01E800DDF0056AA6F /* UIView+LJExtension.m in Sources */,
 				1431AD871E9A18A100A8F5A5 /* LJMakeStepTableViewCell.m in Sources */,
@@ -1856,6 +1902,7 @@
 				140935951E8932ED0042A067 /* LJcommentTableViewCell.m in Sources */,
 				147C84AA1E800D700056AA6F /* LJTooltip.m in Sources */,
 				147C845B1E7FF9800056AA6F /* UIImage+WebP.m in Sources */,
+				1423A6541EB82EF400CE8B05 /* LJguoyinViewController.m in Sources */,
 				14F401601E8CDE6C00350596 /* LJOrderTableViewCell.m in Sources */,
 				1409358E1E891FAD0042A067 /* LJCommentModel.m in Sources */,
 				147C84241E7FF8B60056AA6F /* MJProperty.m in Sources */,
@@ -1903,6 +1950,7 @@
 				14F401551E8CDE6C00350596 /* LJButton.m in Sources */,
 				14F401B21E8CE04B00350596 /* TZTestCell.m in Sources */,
 				14F401371E8CDE6C00350596 /* LJEvaluateOrderViewController.m in Sources */,
+				1423A6571EB8601700CE8B05 /* LJPublicViewController.m in Sources */,
 				147C84701E80005E0056AA6F /* DLCycleBannerView.m in Sources */,
 				14F401491E8CDE6C00350596 /* LJPayOrderViewController.m in Sources */,
 				14BC7FAB1E81726A0089B875 /* LJLuViewController.m in Sources */,

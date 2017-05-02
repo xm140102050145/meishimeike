@@ -1,21 +1,22 @@
 //
-//  LJChuanViewController.m
+//  LJguoyinViewController.m
 //  meishimeike
 //
-//  Created by zhenglong duan on 20/03/2017.
+//  Created by zhenglong duan on 02/05/2017.
 //  Copyright © 2017 zhenglong duan. All rights reserved.
 //
 
-#import "LJChuanViewController.h"
+#import "LJguoyinViewController.h"
 
-@interface LJChuanViewController ()
+@interface LJguoyinViewController ()
 
 @end
 
-@implementation LJChuanViewController
+@implementation LJguoyinViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"果饮";
     self.arr = @[];
 }
 
@@ -33,6 +34,7 @@
     }
     [self.navigationController pushViewController:cate animated:YES];
 }
+
 /*
 #pragma mark - Navigation
 

@@ -16,7 +16,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.commentUserNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 15)];
+        self.commentUserNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 14)];
         self.commentUserNameLabel.textColor = [UIColor blueColor];
         self.commentUserNameLabel.font = LJFontSize14;
         self.commentUserNameLabel.textAlignment = NSTextAlignmentRight;

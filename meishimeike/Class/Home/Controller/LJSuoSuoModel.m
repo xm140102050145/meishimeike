@@ -18,7 +18,7 @@
         _cellHight+= 90;
     }
     if (self.comment.count >0) {
-       CGFloat h = 20 * self.comment.count;
+       CGFloat h = 25 * self.comment.count;
         _cellHight += h;
     }
     _cellHight += 40;

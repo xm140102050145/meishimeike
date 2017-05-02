@@ -160,16 +160,15 @@
 //        [self.stepArray addObject:cell.stepImageView.image];
     }
     
-//    [self upConent:dosageStr dosage:conentStr imageArray:self.stepArray];
-    NSLog(@"dosageStr:---%@,conentStr:--%@,stepArray:--%@",dosageStr,conentStr,self.stepArray);
+    [self upConent:dosageStr dosage:conentStr imageArray:self.stepArray];
 }
 
 #pragma mark --开始上传
 - (void)upConent:(NSMutableString *)conentStr dosage:(NSMutableString *)dosageStr imageArray:(NSArray *)imageArray {
-    NSDictionary *dic = @{@"name":self.cateName,@"brief":self.textView.text,@"taste":@"甜",@"time":@"30min",@"crowd":@"皆宜",@"pay":@"煮",@"kind":self.cateKind,@"classify":@"2",@"material":dosageStr,@"tapy":@"1",@"stepconent":conentStr,@"userid":@"1"};
-    [AFNetworkingAPI uploadImagesWithPath:Publishcate Params:dic imagesArray:imageArray requrieDataBack:^(id  _Nonnull data) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+//    NSDictionary *dic = @{@"name":self.cateName,@"brief":self.textView.text,@"taste":@"甜",@"time":@"30min",@"crowd":@"皆宜",@"pay":@"煮",@"kind":self.cateKind,@"classify":@"2",@"material":dosageStr,@"tapy":@"1",@"stepconent":conentStr,@"userid":@"1"};
+//    [AFNetworkingAPI uploadImagesWithPath:Publishcate Params:dic imagesArray:imageArray requrieDataBack:^(id  _Nonnull data) {
+//    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

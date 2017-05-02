@@ -10,7 +10,7 @@
 #import "NSString+Extension.h"
 @implementation LJCommentModel
 - (CGFloat)cellHeight {
-    _cellHeight = 16;
+    _cellHeight = 10;
     CGFloat h =[self.comment_content heightWithWidth:SCREEN_WIDTH - 70 font:14];
     _cellHeight += h;
     return _cellHeight;

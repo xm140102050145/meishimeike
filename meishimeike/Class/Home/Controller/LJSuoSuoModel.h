@@ -21,7 +21,7 @@
 @property (nonatomic,strong) NSString *suosuo_user_id;
 @property (nonatomic,strong) NSString *user_headimage;
 @property (nonatomic,strong) NSString *user_name;
-@property (nonatomic,strong) NSArray *comment;
+@property (nonatomic,strong) NSMutableArray *comment;
 
 @property (nonatomic,assign) CGFloat cellHight;
 @end

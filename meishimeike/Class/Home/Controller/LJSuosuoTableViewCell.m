@@ -63,6 +63,8 @@
         _commentTableView.dataSource = self;
         _commentTableView.delegate = self;
         [_commentTableView registerClass:[LJcommentTableViewCell class] forCellReuseIdentifier:@"LJcommentTableViewCell"];
+        _commentTableView.scrollEnabled = NO;
+        _commentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _commentTableView;
 }
@@ -80,8 +82,7 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     [self.bgView addSubview:self.commentTableView];
-    self.commentTableView.lj_bottom = self.bgView.lj_bottom - 10;
-    
+    self.commentTableView.lj_bottom = self.bgView.lj_bottom - 10;    
 }
 
 - (void)setSuosuoModel:(LJSuoSuoModel *)suosuoModel {
@@ -93,7 +94,6 @@
     [self.contentLabel sizeToFit];
     
     self.bgView.lj_height = suosuoModel.cellHight - 10;
-    
     NSArray *strArr = [suosuoModel.suosuo_image componentsSeparatedByString:@"jpg"];
     for (int i=0; i<strArr.count; i++) {
         NSString *url = [NSString stringWithFormat:@"%@%@jpg",suosuoUrl,strArr[i]];
@@ -105,20 +105,20 @@
     if (strArr.count >0) {
         h += 88;
     }
-    UIButton *zan = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 55, h, 15, 15)];
-    [zan setImage:[UIImage imageNamed:@"home_shoucang_icon"] forState:UIControlStateNormal];
+    UIButton *zan = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 55, h, 20, 20)];
+    [zan setImage:[UIImage imageNamed:@"赞"] forState:UIControlStateNormal];
     [zan addTarget:self action:@selector(zanClick:) forControlEvents:UIControlEventTouchUpInside];
     zan.tag = 1000;
     [self.contentView addSubview:zan];
     
-    UIButton *comment = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 25, h, 15, 15)];
-    [comment setImage:[UIImage imageNamed:@"home_shoucang_icon"] forState:UIControlStateNormal];
+    UIButton *comment = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 25, h, 20, 20)];
+    [comment setImage:[UIImage imageNamed:@"评论"] forState:UIControlStateNormal];
     [comment addTarget:self action:@selector(zanClick:) forControlEvents:UIControlEventTouchUpInside];
     comment.tag = 1001;
     [self.contentView addSubview:comment];
     
     if (suosuoModel.comment.count > 0) {
-        self.commentTableView.lj_height = suosuoModel.comment.count * 15;
+        self.commentTableView.lj_height = suosuoModel.comment.count * 24;
         for (int i = 0; i <suosuoModel.comment.count; i++) {
         LJCommentModel *comment = [LJCommentModel mj_objectWithKeyValues:suosuoModel.comment[i]];
         [self.commetnArr addObject:comment];
@@ -139,6 +139,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LJcommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LJcommentTableViewCell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.commentModel = self.commetnArr[indexPath.row];
     return cell;
 }

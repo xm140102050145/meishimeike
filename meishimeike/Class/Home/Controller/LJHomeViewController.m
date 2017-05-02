@@ -143,19 +143,23 @@
     }else if (indexPath.section == 4){
         LJfiveCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LJfiveCollectionViewCell" forIndexPath:indexPath];
         cell.cellImageView.image = [UIImage imageNamed:self.teArray[indexPath.row]];
+        LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
         if (indexPath.row == 1) {
             cell.backBlock = ^(NSInteger tag) {
+#warning 填写美食id
                 if (tag == 20) {
-                    NSLog(@"炸紫酥肉");
+                    cate.cateid = @"";//炸紫酥肉
                 }else if (tag == 30){
-                    NSLog(@"松鼠桂鱼");
+                    cate.cateid = @"";//松鼠桂鱼
                 }else if (tag == 40){
-                    NSLog(@"八宝鸭");
+                    cate.cateid = @"";//八宝鸭
                 }
+                [self.navigationController pushViewController:cate animated:YES];
             };
         }else {
             cell.backBlock = ^(NSInteger tag) {
-               NSLog(@"东坡肉");
+                cate.cateid = @"";//东坡肉
+                [self.navigationController pushViewController:cate animated:YES];
             };
         }
         return cell;
@@ -194,33 +198,65 @@
 }
 
 #pragma mark --collectionView Delegate
-// 返回这个UICollectionView是否可以被选择
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
+//// 返回这个UICollectionView是否可以被选择
+//- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
 //UICollectionView被选中的时候调用
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             LJzhongcanViewController *zhongcan = [[LJzhongcanViewController alloc] init];
             [self.navigationController pushViewController:zhongcan animated:YES];
+        }else if (indexPath.row == 1) {
+            UIViewController *vc = [NSClassFromString(@"LJXicanViewController") new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 2) {
+            UIViewController *vc = [NSClassFromString(@"LJhongpeiViewController") new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 3) {
+            UIViewController *vc = [NSClassFromString(@"LJguoyinViewController") new];
+            [self.navigationController pushViewController:vc animated:YES];
         }
     }else {
+#warning 填写美食id
        LJcateStartViewController *cate = [[LJcateStartViewController alloc] init];
         if (indexPath.section == 1) {
             if (indexPath.row == 0) {
                cate.cateid = @"28";//糖醋里脊
             }else if (indexPath.row == 1) {
-                
+                cate.cateid = @"";//红烧鲤鱼
             }else if (indexPath.row == 2) {
-                
+                cate.cateid = @"";//梅菜扣肉
             }
-        }else if (indexPath.section == 2){
-            
+        }else if (indexPath.section == 2){  //周营养
+            if (indexPath.row == 0) {
+                cate.cateid = @"";//山药排骨汤
+            }else if (indexPath.row == 1) {
+                cate.cateid = @"";//红烧排骨
+            }else if (indexPath.row == 2) {
+                cate.cateid = @"";//银耳莲子粥
+            }else if (indexPath.row == 3) {
+                cate.cateid = @"";//酱焖鲫鱼
+            }
         }else if (indexPath.section == 3){
-            
-        }else if (indexPath.section == 4){
-            
+            if (indexPath.row == 0) {
+                cate.cateid = @"";//鸡蛋羹
+            }else if (indexPath.row == 1) {
+                cate.cateid = @"";//番茄牛腩面
+            }else if (indexPath.row == 2) {
+                cate.cateid = @"";//菠萝咕噜肉
+            }else if (indexPath.row == 3) {
+                cate.cateid = @"";//酱烧茄子
+            }else if (indexPath.row == 4) {
+                cate.cateid = @"";//蛋黄焗苦瓜
+            }else if (indexPath.row == 5) {
+                cate.cateid = @"";//土豆焖牛腩
+            }else if (indexPath.row == 6) {
+                cate.cateid = @"";//地三鲜
+            }else if (indexPath.row == 7) {
+                cate.cateid = @"";//芹菜炒香干
+            }
         }
        [self.navigationController pushViewController:cate animated:YES]; 
     }

@@ -46,9 +46,9 @@
         //获取图片参数,MultipartFormData:html的上传图片格式
         for (int i = 0; i < imagesArray.count; i++) {
             NSData *fileData = UIImagePNGRepresentation(imagesArray[i]);
-            NSString *fileName = [NSString stringWithFormat:@"image%d.png",i + 1];
+            NSString *fileName = [NSString stringWithFormat:@"image%d.jpg",i + 1];
             //name:对应的是php中的$info["image"]的“image”
-            [formData appendPartWithFileData:fileData name:@"image[]" fileName:fileName mimeType:@"image/png"];
+            [formData appendPartWithFileData:fileData name:@"image[]" fileName:fileName mimeType:@"image/jpg"];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         requireDataBlock(uploadProgress);

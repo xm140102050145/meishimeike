@@ -1,21 +1,22 @@
 //
-//  LJChuanViewController.m
+//  LJhongpeiViewController.m
 //  meishimeike
 //
-//  Created by zhenglong duan on 20/03/2017.
+//  Created by zhenglong duan on 02/05/2017.
 //  Copyright © 2017 zhenglong duan. All rights reserved.
 //
 
-#import "LJChuanViewController.h"
+#import "LJhongpeiViewController.h"
 
-@interface LJChuanViewController ()
+@interface LJhongpeiViewController ()
 
 @end
 
-@implementation LJChuanViewController
+@implementation LJhongpeiViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"烘培";
     self.arr = @[];
 }
 
